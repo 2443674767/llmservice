@@ -1,0 +1,249 @@
+2025-12-17 16:02:55,321 INFO     27252 admin_service log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\admin_service.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-17 16:02:55,321 INFO     27252 
+         __   ____     _______   _____ _      _      __  __ 
+         \ \ / /\ \   / /  __ \ / ____| |    | |    |  \/  |
+          \ V /  \ \_/ /| |  | | |    | |    | |    | \  / |
+           > <    \   / | |  | | |    | |    | |    | |\/| |
+          / . \    | |  | |__| | |____| |____| |____| |  | |
+         /_/ \_\   |_|  |_____/ \_____|______|______|_|  |_|
+    
+2025-12-17 16:02:55,428 INFO     27252 LLM version: c0a67ba
+2025-12-17 16:02:55,428 INFO     27252 Current configs, from D:\zy\code\python\LangChain\llmservice\llmservice\conf/service_conf.yaml:
+	mysql: {'name': 'llmservice', 'user': 'root', 'password': '********', 'host': 'localhost', 'port': 3306, 'max_connections': 10, 'stale_timeout': 300, 'max_allowed_packet': 1073741824}
+	minio: {'user': 'rag_flow', 'password': '********', 'host': 'localhost:9000'}
+2025-12-17 16:02:55,431 WARNING  27252 SECURITY WARNING: Using auto-generated SECRET_KEY.
+2025-12-17 16:02:55,431 WARNING  27252 Load ner.json FAIL!
+2025-12-17 16:02:55,431 WARNING  27252 Load term.freq FAIL!
+2025-12-17 16:02:55,431 WARNING  27252 Missing synonym.json
+2025-12-17 16:02:55,431 WARNING  27252 Realtime synonym is disabled, since no redis connection.
+2025-12-17 16:02:55,431 WARNING  27252 Fail to load synonym
+2025-12-17 16:02:55,438 INFO     27252 llm service start...
+2025-12-17 16:02:55,447 INFO     27252 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9381
+ * Running on http://192.168.1.143:9381
+2025-12-17 16:02:55,447 INFO     27252 [33mPress CTRL+C to quit[0m
+2025-12-17 16:03:47,514 INFO     27252 127.0.0.1 - - [17/Dec/2025 16:03:47] "[33mGET / HTTP/1.1[0m" 404 -
+2025-12-17 16:03:47,542 INFO     27252 127.0.0.1 - - [17/Dec/2025 16:03:47] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-17 16:04:47,903 INFO     27252 127.0.0.1 - - [17/Dec/2025 16:04:47] "[33mGET /login HTTP/1.1[0m" 404 -
+2025-12-17 16:04:47,925 INFO     27252 127.0.0.1 - - [17/Dec/2025 16:04:47] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-17 16:06:16,719 INFO     27252 127.0.0.1 - - [17/Dec/2025 16:06:16] "[33mGET /api/v1/admin HTTP/1.1[0m" 404 -
+2025-12-17 16:06:16,744 INFO     27252 127.0.0.1 - - [17/Dec/2025 16:06:16] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-17 16:06:41,622 INFO     27252 127.0.0.1 - - [17/Dec/2025 16:06:41] "[31m[1mGET /api/v1/admin/login HTTP/1.1[0m" 405 -
+2025-12-17 16:06:41,643 INFO     27252 127.0.0.1 - - [17/Dec/2025 16:06:41] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+2025-12-17 16:08:52,619 INFO     27252 192.168.1.128 - - [17/Dec/2025 16:08:52] "[31m[1mPOST /api/v1/admin/login HTTP/1.1[0m" 415 -
+2025-12-17 16:10:26,282 INFO     25244 admin_service log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\admin_service.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-17 16:10:26,282 INFO     25244 
+         __   ____     _______   _____ _      _      __  __ 
+         \ \ / /\ \   / /  __ \ / ____| |    | |    |  \/  |
+          \ V /  \ \_/ /| |  | | |    | |    | |    | \  / |
+           > <    \   / | |  | | |    | |    | |    | |\/| |
+          / . \    | |  | |__| | |____| |____| |____| |  | |
+         /_/ \_\   |_|  |_____/ \_____|______|______|_|  |_|
+    
+2025-12-17 16:10:26,347 INFO     25244 LLM version: c0a67ba
+2025-12-17 16:10:26,347 INFO     25244 Current configs, from D:\zy\code\python\LangChain\llmservice\llmservice\conf/service_conf.yaml:
+	mysql: {'name': 'llmservice', 'user': 'root', 'password': '********', 'host': 'localhost', 'port': 3306, 'max_connections': 10, 'stale_timeout': 300, 'max_allowed_packet': 1073741824}
+	minio: {'user': 'rag_flow', 'password': '********', 'host': 'localhost:9000'}
+2025-12-17 16:10:26,350 WARNING  25244 SECURITY WARNING: Using auto-generated SECRET_KEY.
+2025-12-17 16:10:26,350 WARNING  25244 Load ner.json FAIL!
+2025-12-17 16:10:26,350 WARNING  25244 Load term.freq FAIL!
+2025-12-17 16:10:26,351 WARNING  25244 Missing synonym.json
+2025-12-17 16:10:26,351 WARNING  25244 Realtime synonym is disabled, since no redis connection.
+2025-12-17 16:10:26,351 WARNING  25244 Fail to load synonym
+2025-12-17 16:10:29,864 INFO     25244 llm service start...
+2025-12-17 16:10:30,006 INFO     25244 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9381
+ * Running on http://192.168.1.143:9381
+2025-12-17 16:10:30,006 INFO     25244 [33mPress CTRL+C to quit[0m
+2025-12-17 16:10:37,956 INFO     25244 192.168.1.128 - - [17/Dec/2025 16:10:37] "[31m[1mPOST /api/v1/admin/login HTTP/1.1[0m" 415 -
+2025-12-17 16:11:23,635 INFO     25244 192.168.1.128 - - [17/Dec/2025 16:11:23] "[31m[1mPOST /api/v1/admin/login HTTP/1.1[0m" 415 -
+2025-12-17 16:11:34,046 INFO     25244 192.168.1.128 - - [17/Dec/2025 16:11:34] "[31m[1mPOST /api/v1/admin/login HTTP/1.1[0m" 415 -
+2025-12-17 16:12:53,753 INFO     25244 192.168.1.128 - - [17/Dec/2025 16:12:53] "[31m[1mPOST /api/v1/admin/login HTTP/1.1[0m" 400 -
+2025-12-17 16:14:51,569 INFO     23912 admin_service log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\admin_service.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-17 16:14:51,569 INFO     23912 
+         __   ____     _______   _____ _      _      __  __ 
+         \ \ / /\ \   / /  __ \ / ____| |    | |    |  \/  |
+          \ V /  \ \_/ /| |  | | |    | |    | |    | \  / |
+           > <    \   / | |  | | |    | |    | |    | |\/| |
+          / . \    | |  | |__| | |____| |____| |____| |  | |
+         /_/ \_\   |_|  |_____/ \_____|______|______|_|  |_|
+    
+2025-12-17 16:14:51,633 INFO     23912 LLM version: c0a67ba
+2025-12-17 16:14:51,633 INFO     23912 Current configs, from D:\zy\code\python\LangChain\llmservice\llmservice\conf/service_conf.yaml:
+	mysql: {'name': 'llmservice', 'user': 'root', 'password': '********', 'host': 'localhost', 'port': 3306, 'max_connections': 10, 'stale_timeout': 300, 'max_allowed_packet': 1073741824}
+	minio: {'user': 'rag_flow', 'password': '********', 'host': 'localhost:9000'}
+2025-12-17 16:14:51,636 WARNING  23912 SECURITY WARNING: Using auto-generated SECRET_KEY.
+2025-12-17 16:14:51,636 WARNING  23912 Load ner.json FAIL!
+2025-12-17 16:14:51,636 WARNING  23912 Load term.freq FAIL!
+2025-12-17 16:14:51,636 WARNING  23912 Missing synonym.json
+2025-12-17 16:14:51,636 WARNING  23912 Realtime synonym is disabled, since no redis connection.
+2025-12-17 16:14:51,636 WARNING  23912 Fail to load synonym
+2025-12-17 16:14:51,655 INFO     23912 llm service start...
+2025-12-17 16:14:51,671 INFO     23912 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9381
+ * Running on http://192.168.1.143:9381
+2025-12-17 16:14:51,671 INFO     23912 [33mPress CTRL+C to quit[0m
+2025-12-17 16:14:58,643 INFO     23912 192.168.1.128 - - [17/Dec/2025 16:14:58] "[31m[1mPOST /api/v1/admin/login HTTP/1.1[0m" 400 -
+2025-12-17 16:15:48,888 INFO     23912 192.168.1.128 - - [17/Dec/2025 16:15:48] "[31m[1mPOST /api/v1/admin/login HTTP/1.1[0m" 400 -
+2025-12-17 16:15:52,608 INFO     23912 192.168.1.128 - - [17/Dec/2025 16:15:52] "[31m[1mPOST /api/v1/admin/login HTTP/1.1[0m" 400 -
+2025-12-17 16:16:11,362 INFO     23912 192.168.1.128 - - [17/Dec/2025 16:16:11] "[31m[1mPOST /api/v1/admin/login HTTP/1.1[0m" 400 -
+2025-12-17 16:16:50,708 INFO     23912 192.168.1.128 - - [17/Dec/2025 16:16:50] "[31m[1mPOST /api/v1/admin/login HTTP/1.1[0m" 400 -
+2025-12-17 16:24:29,498 INFO     23912 192.168.1.128 - - [17/Dec/2025 16:24:29] "[31m[1mPOST /api/v1/admin/login HTTP/1.1[0m" 400 -
+2025-12-17 16:25:13,385 INFO     23912 192.168.1.128 - - [17/Dec/2025 16:25:13] "[31m[1mPOST /api/v1/admin/login HTTP/1.1[0m" 400 -
+2025-12-17 16:26:36,435 INFO     24312 admin_service log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\admin_service.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-17 16:26:36,437 INFO     24312 
+         __   ____     _______   _____ _      _      __  __ 
+         \ \ / /\ \   / /  __ \ / ____| |    | |    |  \/  |
+          \ V /  \ \_/ /| |  | | |    | |    | |    | \  / |
+           > <    \   / | |  | | |    | |    | |    | |\/| |
+          / . \    | |  | |__| | |____| |____| |____| |  | |
+         /_/ \_\   |_|  |_____/ \_____|______|______|_|  |_|
+    
+2025-12-17 16:26:36,505 INFO     24312 LLM version: c0a67ba
+2025-12-17 16:26:36,505 INFO     24312 Current configs, from D:\zy\code\python\LangChain\llmservice\llmservice\conf/service_conf.yaml:
+	mysql: {'name': 'llmservice', 'user': 'root', 'password': '********', 'host': 'localhost', 'port': 3306, 'max_connections': 10, 'stale_timeout': 300, 'max_allowed_packet': 1073741824}
+	minio: {'user': 'rag_flow', 'password': '********', 'host': 'localhost:9000'}
+2025-12-17 16:26:36,507 WARNING  24312 SECURITY WARNING: Using auto-generated SECRET_KEY.
+2025-12-17 16:26:36,507 WARNING  24312 Load ner.json FAIL!
+2025-12-17 16:26:36,508 WARNING  24312 Load term.freq FAIL!
+2025-12-17 16:26:36,508 WARNING  24312 Missing synonym.json
+2025-12-17 16:26:36,508 WARNING  24312 Realtime synonym is disabled, since no redis connection.
+2025-12-17 16:26:36,508 WARNING  24312 Fail to load synonym
+2025-12-17 16:26:36,518 INFO     24312 llm service start...
+2025-12-17 16:26:36,535 INFO     24312 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9381
+ * Running on http://192.168.1.143:9381
+2025-12-17 16:26:36,535 INFO     24312 [33mPress CTRL+C to quit[0m
+2025-12-17 16:26:44,820 INFO     24312 192.168.1.128 - - [17/Dec/2025 16:26:44] "[31m[1mPOST /api/v1/admin/login HTTP/1.1[0m" 400 -
+2025-12-17 16:31:22,458 INFO     25724 admin_service log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\admin_service.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-17 16:31:22,458 INFO     25724 
+         __   ____     _______   _____ _      _      __  __ 
+         \ \ / /\ \   / /  __ \ / ____| |    | |    |  \/  |
+          \ V /  \ \_/ /| |  | | |    | |    | |    | \  / |
+           > <    \   / | |  | | |    | |    | |    | |\/| |
+          / . \    | |  | |__| | |____| |____| |____| |  | |
+         /_/ \_\   |_|  |_____/ \_____|______|______|_|  |_|
+    
+2025-12-17 16:31:22,527 INFO     25724 LLM version: c0a67ba
+2025-12-17 16:31:22,527 INFO     25724 Current configs, from D:\zy\code\python\LangChain\llmservice\llmservice\conf/service_conf.yaml:
+	mysql: {'name': 'llmservice', 'user': 'root', 'password': '********', 'host': 'localhost', 'port': 3306, 'max_connections': 10, 'stale_timeout': 300, 'max_allowed_packet': 1073741824}
+	minio: {'user': 'rag_flow', 'password': '********', 'host': 'localhost:9000'}
+2025-12-17 16:31:22,529 WARNING  25724 SECURITY WARNING: Using auto-generated SECRET_KEY.
+2025-12-17 16:31:22,529 WARNING  25724 Load ner.json FAIL!
+2025-12-17 16:31:22,529 WARNING  25724 Load term.freq FAIL!
+2025-12-17 16:31:22,529 WARNING  25724 Missing synonym.json
+2025-12-17 16:31:22,529 WARNING  25724 Realtime synonym is disabled, since no redis connection.
+2025-12-17 16:31:22,530 WARNING  25724 Fail to load synonym
+2025-12-17 16:31:56,974 INFO     25724 llm service start...
+2025-12-17 16:31:56,990 INFO     25724 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9381
+ * Running on http://192.168.1.143:9381
+2025-12-17 16:31:56,990 INFO     25724 [33mPress CTRL+C to quit[0m
+2025-12-17 16:32:03,785 INFO     23192 admin_service log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\admin_service.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-17 16:32:03,785 INFO     23192 
+         __   ____     _______   _____ _      _      __  __ 
+         \ \ / /\ \   / /  __ \ / ____| |    | |    |  \/  |
+          \ V /  \ \_/ /| |  | | |    | |    | |    | \  / |
+           > <    \   / | |  | | |    | |    | |    | |\/| |
+          / . \    | |  | |__| | |____| |____| |____| |  | |
+         /_/ \_\   |_|  |_____/ \_____|______|______|_|  |_|
+    
+2025-12-17 16:32:03,853 INFO     23192 LLM version: c0a67ba
+2025-12-17 16:32:03,853 INFO     23192 Current configs, from D:\zy\code\python\LangChain\llmservice\llmservice\conf/service_conf.yaml:
+	mysql: {'name': 'llmservice', 'user': 'root', 'password': '********', 'host': 'localhost', 'port': 3306, 'max_connections': 10, 'stale_timeout': 300, 'max_allowed_packet': 1073741824}
+	minio: {'user': 'rag_flow', 'password': '********', 'host': 'localhost:9000'}
+2025-12-17 16:32:03,855 WARNING  23192 SECURITY WARNING: Using auto-generated SECRET_KEY.
+2025-12-17 16:32:03,855 WARNING  23192 Load ner.json FAIL!
+2025-12-17 16:32:03,855 WARNING  23192 Load term.freq FAIL!
+2025-12-17 16:32:03,856 WARNING  23192 Missing synonym.json
+2025-12-17 16:32:03,856 WARNING  23192 Realtime synonym is disabled, since no redis connection.
+2025-12-17 16:32:03,856 WARNING  23192 Fail to load synonym
+2025-12-17 16:33:52,074 INFO     23192 llm service start...
+2025-12-17 16:33:52,093 INFO     23192 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9381
+ * Running on http://192.168.1.143:9381
+2025-12-17 16:33:52,094 INFO     23192 [33mPress CTRL+C to quit[0m
+2025-12-17 16:34:12,301 INFO     9500 admin_service log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\admin_service.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-17 16:34:12,301 INFO     9500 
+         __   ____     _______   _____ _      _      __  __ 
+         \ \ / /\ \   / /  __ \ / ____| |    | |    |  \/  |
+          \ V /  \ \_/ /| |  | | |    | |    | |    | \  / |
+           > <    \   / | |  | | |    | |    | |    | |\/| |
+          / . \    | |  | |__| | |____| |____| |____| |  | |
+         /_/ \_\   |_|  |_____/ \_____|______|______|_|  |_|
+    
+2025-12-17 16:34:12,376 INFO     9500 LLM version: c0a67ba
+2025-12-17 16:34:12,376 INFO     9500 Current configs, from D:\zy\code\python\LangChain\llmservice\llmservice\conf/service_conf.yaml:
+	mysql: {'name': 'llmservice', 'user': 'root', 'password': '********', 'host': 'localhost', 'port': 3306, 'max_connections': 10, 'stale_timeout': 300, 'max_allowed_packet': 1073741824}
+	minio: {'user': 'rag_flow', 'password': '********', 'host': 'localhost:9000'}
+2025-12-17 16:34:12,378 WARNING  9500 SECURITY WARNING: Using auto-generated SECRET_KEY.
+2025-12-17 16:34:12,378 WARNING  9500 Load ner.json FAIL!
+2025-12-17 16:34:12,378 WARNING  9500 Load term.freq FAIL!
+2025-12-17 16:34:12,378 WARNING  9500 Missing synonym.json
+2025-12-17 16:34:12,378 WARNING  9500 Realtime synonym is disabled, since no redis connection.
+2025-12-17 16:34:12,378 WARNING  9500 Fail to load synonym
+2025-12-17 16:34:12,385 INFO     9500 llm service start...
+2025-12-17 16:34:12,394 INFO     9500 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9381
+ * Running on http://192.168.1.143:9381
+2025-12-17 16:34:12,394 INFO     9500 [33mPress CTRL+C to quit[0m
+2025-12-17 16:34:16,859 INFO     9500 192.168.1.128 - - [17/Dec/2025 16:34:16] "[31m[1mPOST /api/v1/admin/login HTTP/1.1[0m" 400 -
+2025-12-17 16:34:40,681 INFO     27532 admin_service log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\admin_service.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-17 16:34:40,682 INFO     27532 
+         __   ____     _______   _____ _      _      __  __ 
+         \ \ / /\ \   / /  __ \ / ____| |    | |    |  \/  |
+          \ V /  \ \_/ /| |  | | |    | |    | |    | \  / |
+           > <    \   / | |  | | |    | |    | |    | |\/| |
+          / . \    | |  | |__| | |____| |____| |____| |  | |
+         /_/ \_\   |_|  |_____/ \_____|______|______|_|  |_|
+    
+2025-12-17 16:34:40,750 INFO     27532 LLM version: c0a67ba
+2025-12-17 16:34:40,750 INFO     27532 Current configs, from D:\zy\code\python\LangChain\llmservice\llmservice\conf/service_conf.yaml:
+	mysql: {'name': 'llmservice', 'user': 'root', 'password': '********', 'host': 'localhost', 'port': 3306, 'max_connections': 10, 'stale_timeout': 300, 'max_allowed_packet': 1073741824}
+	minio: {'user': 'rag_flow', 'password': '********', 'host': 'localhost:9000'}
+2025-12-17 16:34:40,752 WARNING  27532 SECURITY WARNING: Using auto-generated SECRET_KEY.
+2025-12-17 16:34:40,752 WARNING  27532 Load ner.json FAIL!
+2025-12-17 16:34:40,752 WARNING  27532 Load term.freq FAIL!
+2025-12-17 16:34:40,752 WARNING  27532 Missing synonym.json
+2025-12-17 16:34:40,753 WARNING  27532 Realtime synonym is disabled, since no redis connection.
+2025-12-17 16:34:40,753 WARNING  27532 Fail to load synonym
+2025-12-17 16:34:40,763 INFO     27532 llm service start...
+2025-12-17 16:34:40,778 INFO     27532 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9381
+ * Running on http://192.168.1.143:9381
+2025-12-17 16:34:40,778 INFO     27532 [33mPress CTRL+C to quit[0m
+2025-12-17 16:35:16,584 INFO     27532 192.168.1.128 - - [17/Dec/2025 16:35:16] "[31m[1mPOST /api/v1/admin/login HTTP/1.1[0m" 400 -
+2025-12-17 16:47:59,929 INFO     27596 admin_service log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\admin_service.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-17 16:47:59,929 INFO     27596 
+         __   ____     _______   _____ _      _      __  __ 
+         \ \ / /\ \   / /  __ \ / ____| |    | |    |  \/  |
+          \ V /  \ \_/ /| |  | | |    | |    | |    | \  / |
+           > <    \   / | |  | | |    | |    | |    | |\/| |
+          / . \    | |  | |__| | |____| |____| |____| |  | |
+         /_/ \_\   |_|  |_____/ \_____|______|______|_|  |_|
+    
+2025-12-17 16:48:00,041 INFO     27596 LLM version: c0a67ba
+2025-12-17 16:48:00,041 INFO     27596 Current configs, from D:\zy\code\python\LangChain\llmservice\llmservice\conf/service_conf.yaml:
+	mysql: {'name': 'llmservice', 'user': 'root', 'password': '********', 'host': 'localhost', 'port': 3306, 'max_connections': 10, 'stale_timeout': 300, 'max_allowed_packet': 1073741824}
+	minio: {'user': 'rag_flow', 'password': '********', 'host': 'localhost:9000'}
+2025-12-17 16:48:00,042 WARNING  27596 SECURITY WARNING: Using auto-generated SECRET_KEY.
+2025-12-17 16:48:00,042 WARNING  27596 Load ner.json FAIL!
+2025-12-17 16:48:00,043 WARNING  27596 Load term.freq FAIL!
+2025-12-17 16:48:00,043 WARNING  27596 Missing synonym.json
+2025-12-17 16:48:00,043 WARNING  27596 Realtime synonym is disabled, since no redis connection.
+2025-12-17 16:48:00,043 WARNING  27596 Fail to load synonym
+2025-12-17 16:48:00,049 INFO     27596 llm service start...
+2025-12-17 16:48:00,059 INFO     27596 [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9381
+ * Running on http://192.168.1.143:9381
+2025-12-17 16:48:00,059 INFO     27596 [33mPress CTRL+C to quit[0m
+2025-12-17 16:48:04,927 INFO     27596 192.168.1.128 - - [17/Dec/2025 16:48:04] "POST /api/v1/admin/login HTTP/1.1" 200 -

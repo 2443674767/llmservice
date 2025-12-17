@@ -13,12 +13,12 @@ from common.constants import RAG_FLOW_SERVICE_NAME, Storage
 from common.file_utils import get_project_base_directory
 from rag.nlp import search
 
-from rag.utils.azure_sas_conn import RAGFlowAzureSasBlob
-from rag.utils.azure_spn_conn import RAGFlowAzureSpnBlob
-from rag.utils.minio_conn import RAGFlowMinio
-from rag.utils.opendal_conn import OpenDALStorage
-from rag.utils.s3_conn import RAGFlowS3
-from rag.utils.oss_conn import RAGFlowOSS
+# from rag.utils.azure_sas_conn import RAGFlowAzureSasBlob
+# from rag.utils.azure_spn_conn import RAGFlowAzureSpnBlob
+# from rag.utils.minio_conn import RAGFlowMinio
+# from rag.utils.opendal_conn import OpenDALStorage
+# from rag.utils.s3_conn import RAGFlowS3
+# from rag.utils.oss_conn import RAGFlowOSS
 
 LLM_FACTORY = None
 LLM_BASE_URL = None
@@ -98,19 +98,19 @@ def _get_or_create_secret_key():
     return new_key
 
 
-class StorageFactory:
-    storage_mapping = {
-        Storage.MINIO: RAGFlowMinio,
-        Storage.AZURE_SPN: RAGFlowAzureSpnBlob,
-        Storage.AZURE_SAS: RAGFlowAzureSasBlob,
-        Storage.AWS_S3: RAGFlowS3,
-        Storage.OSS: RAGFlowOSS,
-        Storage.OPENDAL: OpenDALStorage
-    }
-
-    @classmethod
-    def create(cls, storage: Storage):
-        return cls.storage_mapping[storage]()
+# class StorageFactory:
+#     storage_mapping = {
+#         Storage.MINIO: RAGFlowMinio,
+#         Storage.AZURE_SPN: RAGFlowAzureSpnBlob,
+#         Storage.AZURE_SAS: RAGFlowAzureSasBlob,
+#         Storage.AWS_S3: RAGFlowS3,
+#         Storage.OSS: RAGFlowOSS,
+#         Storage.OPENDAL: OpenDALStorage
+#     }
+#
+#     @classmethod
+#     def create(cls, storage: Storage):
+#         return cls.storage_mapping[storage]()
 
 
 def init_settings():
@@ -231,8 +231,8 @@ def init_settings():
         OSS = get_base_config("oss", {})
 
     # 存储实现工厂实例
-    global STORAGE_IMPL
-    STORAGE_IMPL = StorageFactory.create(Storage[STORAGE_IMPL_TYPE])
+    # global STORAGE_IMPL
+    # STORAGE_IMPL = StorageFactory.create(Storage[STORAGE_IMPL_TYPE])
 
     # 检索器与知识图谱检索器配置
     global retriever, kg_retriever

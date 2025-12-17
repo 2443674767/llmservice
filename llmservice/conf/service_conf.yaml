@@ -1,5 +1,5 @@
 mysql:
-  name: 'admin_account'
+  name: 'llmservice'
   user: 'root'
   password: '123456'
   host: 'localhost'
@@ -7,3 +7,7 @@ mysql:
   max_connections: 10
   stale_timeout: 300
   max_allowed_packet: 1073741824
+minio:
+  user: 'rag_flow'
+  password: 'infini_rag_flow'
+  host: 'localhost:9000'

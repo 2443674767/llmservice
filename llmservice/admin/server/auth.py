@@ -82,8 +82,8 @@ def login_admin(email: str, password: str):
     user = UserService.query_user(email, psw)
     if not user:
         raise AdminException("Email and password do not match!")
-    if not user.is_superuser:
-        raise AdminException("Not admin", 403)
+    # if not user.is_superuser:
+    #     raise AdminException("Not admin", 403)
     if user.is_active == ActiveEnum.INACTIVE.value:
         raise AdminException(f"User {email} inactive", 403)
 

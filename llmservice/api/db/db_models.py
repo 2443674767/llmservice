@@ -158,48 +158,24 @@ class BaseModel(Model):
 
         return super().insert(__data, **insert)
 
-    # update和insert都会触发调用此方法，自动维护update_time/update_date等通用字段
-    # @classmethod
-    # def _normalize_data(cls, data, kwargs):
-    #     normalized = super()._normalize_data(data, kwargs)
-    #     if not normalized:
-    #         return {}
-    #
-    #     # 自动更新update_time每次变更
-    #     normalized[cls._meta.combined["update_time"]] = current_timestamp()
-    #
-    #     # 针对定义的自动时间戳前缀，自动同步date字段
-    #     for f_n in AUTO_DATE_TIMESTAMP_FIELD_PREFIX:
-    #         if {f"{f_n}_time", f"{f_n}_date"}.issubset(cls._meta.combined.keys()) and cls._meta.combined[f"{f_n}_time"] in normalized and normalized[cls._meta.combined[f"{f_n}_time"]] is not None:
-    #             normalized[cls._meta.combined[f"{f_n}_date"]] = timestamp_to_date(normalized[cls._meta.combined[f"{f_n}_time"]])
-    #
-    #     return normalized
 
-    # 使用 pre_save 信号
     @classmethod
-    def save(self, *args, **kwargs):
-        # 自动更新时间戳和日期
-        now_ts = current_timestamp()
-        now_date = timestamp_to_date(now_ts)
-        if self._pk is not None:
-            # 更新场景
-            self.update_time = now_ts
-            self.update_date = now_date
-        else:
-            # 插入场景
-            self.create_time = now_ts
-            self.create_date = now_date
-            self.update_time = now_ts
-            self.update_date = now_date
-        # 针对自定义的自动日期字段（如 start_time/start_date, end_time/end_date 等）做转换
-        for f_n in getattr(self, 'AUTO_DATE_TIMESTAMP_FIELD_PREFIX', []):
-            ts_field = f"{f_n}_time"
-            date_field = f"{f_n}_date"
-            if hasattr(self, ts_field) and hasattr(self, date_field):
-                ts_value = getattr(self, ts_field)
-                if ts_value is not None:
-                    setattr(self, date_field, timestamp_to_date(ts_value))
-        return super().save(*args, **kwargs)
+    def _normalize_data(cls, data, kwargs):
+        normalized = super()._normalize_data(data, kwargs)
+        if not normalized:
+            return {}
+
+        normalized[cls._meta.combined["update_time"]] = current_timestamp()
+
+        for f_n in AUTO_DATE_TIMESTAMP_FIELD_PREFIX:
+            if {f"{f_n}_time", f"{f_n}_date"}.issubset(cls._meta.combined.keys()) and cls._meta.combined[f"{f_n}_time"] in normalized and normalized[cls._meta.combined[f"{f_n}_time"]] is not None:
+                normalized[cls._meta.combined[f"{f_n}_date"]] = timestamp_to_date(normalized[cls._meta.combined[f"{f_n}_time"]])
+
+        return normalized
+
+    # @classmethod
+    # def save(self, *args, **kwargs):
+    #     return super(BaseModel, self).save(*args, **kwargs)
 
 
 class RetryingPooledMySQLDatabase(PooledMySQLDatabase):

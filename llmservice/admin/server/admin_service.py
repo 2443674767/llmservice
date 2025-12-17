@@ -15,6 +15,7 @@ from admin.server.config import SERVICE_CONFIGS, load_configurations
 from common import settings
 from common.config_utils import show_configs
 from common.constants import SERVICE_CONF
+from common.log_utils import init_root_logger
 from common.versions import get_ragflow_version
 from routes import admin_bp
 
@@ -26,7 +27,7 @@ stop_event = threading.Event()
 if __name__ == '__main__':
     # 启用 Python 的 faulthandler 模块，以便在程序崩溃时自动打印当前线程或所有线程的栈追踪（traceback），帮助定位和调试进程中的崩溃、死锁等问题
     faulthandler.enable()
-    logging.info("admin_service")
+    init_root_logger("admin_service")
     logging.info(r"""
          __   ____     _______   _____ _      _      __  __ 
          \ \ / /\ \   / /  __ \ / ____| |    | |    |  \/  |

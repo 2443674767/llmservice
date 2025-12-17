@@ -1,3 +1,4 @@
+from common.constants import RetCode
 
 
 def sync_construct_response(code=RetCode.SUCCESS, message="success", data=None, auth=None):
