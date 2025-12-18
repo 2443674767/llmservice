@@ -1,0 +1,91 @@
+2025-12-18 15:39:28,759 INFO     22536 graph_mcp log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-18 15:39:28,759 INFO     22536 初始化 MCP Agent 微服务...
+2025-12-18 15:39:28,759 INFO     22536 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2025-12-18 15:39:28,776 INFO     22536 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2025-12-18 15:39:28,778 INFO     22536 语言模型初始化成功: llama3.1:8b
+2025-12-18 15:39:29,325 INFO     22536 SQL Agent 注册成功
+2025-12-18 15:39:29,325 INFO     22536 Weather Agent 注册成功
+2025-12-18 15:39:45,820 INFO     4816 graph_mcp log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-18 15:39:45,820 INFO     4816 初始化 MCP Agent 微服务...
+2025-12-18 15:39:45,820 INFO     4816 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2025-12-18 15:39:45,839 INFO     4816 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2025-12-18 15:39:45,840 INFO     4816 语言模型初始化成功: llama3.1:8b
+2025-12-18 15:39:46,451 INFO     4816 SQL Agent 注册成功
+2025-12-18 15:39:46,451 INFO     4816 Weather Agent 注册成功
+2025-12-18 15:42:13,211 INFO     4816 Processing request of type CallToolRequest
+2025-12-18 15:46:04,513 INFO     4816 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:46:05,291 INFO     4816 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:46:07,323 INFO     4816 Processing request of type ListToolsRequest
+2025-12-18 15:46:39,886 INFO     4816 Processing request of type CallToolRequest
+2025-12-18 15:46:40,406 INFO     4816 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:46:41,175 INFO     4816 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:46:43,811 INFO     4816 Processing request of type ListToolsRequest
+2025-12-18 15:55:51,358 INFO     4816 Processing request of type CallToolRequest
+2025-12-18 15:55:51,870 INFO     4816 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:55:51,975 INFO     4816 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:55:52,334 INFO     4816 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:55:53,109 INFO     4816 Processing request of type ListToolsRequest
+2025-12-18 15:56:16,538 INFO     6624 graph_mcp log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-18 15:56:16,538 INFO     6624 初始化 MCP Agent 微服务...
+2025-12-18 15:56:16,538 INFO     6624 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2025-12-18 15:56:16,557 INFO     6624 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2025-12-18 15:56:16,558 INFO     6624 语言模型初始化成功: llama3.1:8b
+2025-12-18 15:56:17,192 INFO     6624 SQL Agent 注册成功
+2025-12-18 15:56:17,193 INFO     6624 Weather Agent 注册成功
+2025-12-18 15:56:20,858 INFO     6624 Processing request of type ListToolsRequest
+2025-12-18 15:56:44,753 INFO     6624 Processing request of type CallToolRequest
+2025-12-18 15:56:51,546 INFO     6624 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 16:00:04,411 INFO     6624 Processing request of type ListToolsRequest
+2025-12-18 17:02:38,527 INFO     10028 graph_mcp log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-18 17:02:38,527 INFO     10028 初始化 MCP Agent 微服务...
+2025-12-18 17:02:38,528 INFO     10028 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2025-12-18 17:02:38,544 INFO     10028 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2025-12-18 17:02:38,544 INFO     10028 语言模型初始化成功: llama3.1:8b
+2025-12-18 17:02:39,082 INFO     10028 SQL Agent 注册成功
+2025-12-18 17:02:39,082 INFO     10028 Weather Agent 注册成功
+2025-12-18 17:02:59,450 INFO     10028 Processing request of type ListToolsRequest
+2025-12-18 17:03:59,539 INFO     10028 Processing request of type CallToolRequest
+2025-12-18 17:03:59,967 INFO     10028 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 17:04:00,126 INFO     10028 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 17:04:00,936 INFO     10028 Processing request of type ListToolsRequest
+2025-12-18 17:10:12,210 INFO     25792 graph_mcp log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-18 17:10:12,211 INFO     25792 初始化 MCP Agent 微服务...
+2025-12-18 17:10:12,211 INFO     25792 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2025-12-18 17:10:12,226 INFO     25792 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2025-12-18 17:10:12,226 INFO     25792 语言模型初始化成功: llama3.1:8b
+2025-12-18 17:10:12,783 INFO     25792 SQL Agent 注册成功
+2025-12-18 17:10:12,783 INFO     25792 Weather Agent 注册成功
+2025-12-18 17:10:41,419 INFO     25792 Processing request of type ListToolsRequest
+2025-12-18 17:11:46,820 INFO     25792 Processing request of type CallToolRequest
+2025-12-18 17:11:46,927 INFO     25792 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 17:11:46,982 INFO     25792 Processing request of type ListToolsRequest

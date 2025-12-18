@@ -247,3 +247,136 @@
  * Running on http://192.168.1.143:9381
 2025-12-17 16:48:00,059 INFO     27596 [33mPress CTRL+C to quit[0m
 2025-12-17 16:48:04,927 INFO     27596 192.168.1.128 - - [17/Dec/2025 16:48:04] "POST /api/v1/admin/login HTTP/1.1" 200 -
+2025-12-18 09:06:11,404 INFO     2412 admin_service log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\admin_service.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-18 09:06:11,433 INFO     2412 
+         __   ____     _______   _____ _      _      __  __ 
+         \ \ / /\ \   / /  __ \ / ____| |    | |    |  \/  |
+          \ V /  \ \_/ /| |  | | |    | |    | |    | \  / |
+           > <    \   / | |  | | |    | |    | |    | |\/| |
+          / . \    | |  | |__| | |____| |____| |____| |  | |
+         /_/ \_\   |_|  |_____/ \_____|______|______|_|  |_|
+    
+2025-12-18 09:06:11,761 INFO     2412 LLM version: f339972
+2025-12-18 09:06:11,761 INFO     2412 Current configs, from D:\zy\code\python\LangChain\llmservice\llmservice\conf/service_conf.yaml:
+	mysql: {'name': 'llmservice', 'user': 'root', 'password': '********', 'host': 'localhost', 'port': 3306, 'max_connections': 10, 'stale_timeout': 300, 'max_allowed_packet': 1073741824}
+	minio: {'user': 'rag_flow', 'password': '********', 'host': 'localhost:9000'}
+2025-12-18 09:07:38,328 INFO     14524 admin_service log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\admin_service.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-18 09:07:38,328 INFO     14524 
+         __   ____     _______   _____ _      _      __  __ 
+         \ \ / /\ \   / /  __ \ / ____| |    | |    |  \/  |
+          \ V /  \ \_/ /| |  | | |    | |    | |    | \  / |
+           > <    \   / | |  | | |    | |    | |    | |\/| |
+          / . \    | |  | |__| | |____| |____| |____| |  | |
+         /_/ \_\   |_|  |_____/ \_____|______|______|_|  |_|
+    
+2025-12-18 09:07:38,389 INFO     14524 LLM version: f339972
+2025-12-18 09:07:38,390 INFO     14524 Current configs, from D:\zy\code\python\LangChain\llmservice\llmservice\conf/service_conf.yaml:
+	mysql: {'name': 'llmservice', 'user': 'root', 'password': '********', 'host': 'localhost', 'port': 3306, 'max_connections': 10, 'stale_timeout': 300, 'max_allowed_packet': 1073741824}
+	minio: {'user': 'rag_flow', 'password': '********', 'host': 'localhost:9000'}
+2025-12-18 09:13:43,545 INFO     17504 admin_service log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\admin_service.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-18 09:13:43,545 INFO     17504 Æô¶¯ MCP  ·þÎñÆ÷£¬¼àÌý http://0.0.0.0:8000
+2025-12-18 09:13:43,590 WARNING  17504 SECURITY WARNING: Using auto-generated SECRET_KEY.
+2025-12-18 09:13:43,591 WARNING  17504 Load ner.json FAIL!
+2025-12-18 09:13:43,591 WARNING  17504 Load term.freq FAIL!
+2025-12-18 09:13:43,592 WARNING  17504 Missing synonym.json
+2025-12-18 09:13:43,592 WARNING  17504 Realtime synonym is disabled, since no redis connection.
+2025-12-18 09:13:43,592 WARNING  17504 Fail to load synonym
+2025-12-18 09:13:43,592 INFO     17504 
+            __  __  ____ ____       ____  _____ ______     _______ ____
+            |  \/  |/ ___|  _ \     / ___|| ____|  _ \ \   / / ____|  _ \
+            | |\/| | |   | |_) |    \___ \|  _| | |_) \ \ / /|  _| | |_) |
+            | |  | | |___|  __/      ___) | |___|  _ < \ V / | |___|  _ <
+            |_|  |_|\____|_|        |____/|_____|_| \_\ \_/  |_____|_| \_\
+        
+2025-12-18 09:14:10,039 INFO     16656 admin_service log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\admin_service.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-18 09:14:10,039 INFO     16656 Æô¶¯ MCP  ·þÎñÆ÷£¬¼àÌý http://0.0.0.0:8000
+2025-12-18 09:14:18,363 WARNING  16656 SECURITY WARNING: Using auto-generated SECRET_KEY.
+2025-12-18 09:14:18,363 WARNING  16656 Load ner.json FAIL!
+2025-12-18 09:14:18,363 WARNING  16656 Load term.freq FAIL!
+2025-12-18 09:14:18,364 WARNING  16656 Missing synonym.json
+2025-12-18 09:14:18,364 WARNING  16656 Realtime synonym is disabled, since no redis connection.
+2025-12-18 09:14:18,364 WARNING  16656 Fail to load synonym
+2025-12-18 09:14:18,364 INFO     16656 
+            __  __  ____ ____       ____  _____ ______     _______ ____
+            |  \/  |/ ___|  _ \     / ___|| ____|  _ \ \   / / ____|  _ \
+            | |\/| | |   | |_) |    \___ \|  _| | |_) \ \ / /|  _| | |_) |
+            | |  | | |___|  __/      ___) | |___|  _ < \ V / | |___|  _ <
+            |_|  |_|\____|_|        |____/|_____|_| \_\ \_/  |_____|_| \_\
+        
+2025-12-18 09:20:33,487 INFO     2372 admin_service log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\admin_service.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-18 09:20:33,487 INFO     2372 Æô¶¯ MCP  ·þÎñÆ÷£¬¼àÌý http://0.0.0.0:8000
+2025-12-18 09:20:41,509 WARNING  2372 SECURITY WARNING: Using auto-generated SECRET_KEY.
+2025-12-18 09:20:41,509 WARNING  2372 Load ner.json FAIL!
+2025-12-18 09:20:41,509 WARNING  2372 Load term.freq FAIL!
+2025-12-18 09:20:41,509 WARNING  2372 Missing synonym.json
+2025-12-18 09:20:41,510 WARNING  2372 Realtime synonym is disabled, since no redis connection.
+2025-12-18 09:20:41,510 WARNING  2372 Fail to load synonym
+2025-12-18 09:20:41,510 INFO     2372 
+            __  __  ____ ____       ____  _____ ______     _______ ____
+            |  \/  |/ ___|  _ \     / ___|| ____|  _ \ \   / / ____|  _ \
+            | |\/| | |   | |_) |    \___ \|  _| | |_) \ \ / /|  _| | |_) |
+            | |  | | |___|  __/      ___) | |___|  _ < \ V / | |___|  _ <
+            |_|  |_|\____|_|        |____/|_____|_| \_\ \_/  |_____|_| \_\
+        
+2025-12-18 15:26:06,416 INFO     14020 admin_service log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\admin_service.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-18 15:26:06,433 INFO     14020 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2025-12-18 15:26:11,657 INFO     14020 Processing request of type ListToolsRequest
+2025-12-18 15:26:44,243 INFO     14020 Processing request of type CallToolRequest
+2025-12-18 15:26:44,577 INFO     14020 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:26:44,668 INFO     14020 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:26:44,719 INFO     14020 Processing request of type ListToolsRequest
+2025-12-18 15:31:18,511 INFO     10820 admin_service log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\admin_service.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-18 15:31:18,528 INFO     10820 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2025-12-18 15:31:20,862 INFO     10820 Processing request of type ListToolsRequest
+2025-12-18 15:31:57,727 INFO     10820 Processing request of type CallToolRequest
+2025-12-18 15:31:58,050 INFO     10820 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:31:58,142 INFO     10820 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:31:58,204 INFO     10820 Processing request of type ListToolsRequest
+2025-12-18 15:32:12,856 INFO     10820 Processing request of type CallToolRequest
+2025-12-18 15:32:13,121 INFO     10820 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:32:13,216 INFO     10820 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:32:13,813 INFO     10820 Processing request of type ListToolsRequest
+2025-12-18 15:34:04,328 INFO     13480 admin_service log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\admin_service.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-18 15:34:04,328 INFO     13480 ³õÊ¼»¯ MCP Agent Î¢·þÎñ...
+2025-12-18 15:34:04,336 INFO     13480 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2025-12-18 15:34:04,353 INFO     13480 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2025-12-18 15:34:04,353 INFO     13480 ÓïÑÔÄ£ÐÍ³õÊ¼»¯³É¹¦: llama3.1:8b
+2025-12-18 15:34:04,895 INFO     13480 SQL Agent ×¢²á³É¹¦
+2025-12-18 15:34:21,436 INFO     23888 admin_service log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\admin_service.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2025-12-18 15:34:21,436 INFO     23888 ³õÊ¼»¯ MCP Agent Î¢·þÎñ...
+2025-12-18 15:34:21,436 INFO     23888 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2025-12-18 15:34:21,452 INFO     23888 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2025-12-18 15:34:21,453 INFO     23888 ÓïÑÔÄ£ÐÍ³õÊ¼»¯³É¹¦: llama3.1:8b
+2025-12-18 15:34:22,007 INFO     23888 SQL Agent ×¢²á³É¹¦
+2025-12-18 15:34:22,007 INFO     23888 Weather Agent ×¢²á³É¹¦
+2025-12-18 15:35:20,655 INFO     23888 Processing request of type CallToolRequest
+2025-12-18 15:35:22,622 INFO     23888 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:35:22,716 INFO     23888 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:35:22,987 INFO     23888 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:35:23,361 INFO     23888 Processing request of type ListToolsRequest
+2025-12-18 15:36:02,835 INFO     23888 Processing request of type CallToolRequest
+2025-12-18 15:36:03,098 INFO     23888 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:36:03,190 INFO     23888 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:36:03,787 INFO     23888 Processing request of type ListToolsRequest
+2025-12-18 15:36:41,098 INFO     23888 Processing request of type CallToolRequest
+2025-12-18 15:36:41,572 INFO     23888 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:36:41,670 INFO     23888 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:36:41,985 INFO     23888 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:36:42,409 INFO     23888 Processing request of type ListToolsRequest
+2025-12-18 15:36:48,127 INFO     23888 Processing request of type ListToolsRequest
+2025-12-18 15:36:50,266 INFO     23888 Processing request of type CallToolRequest
+2025-12-18 15:36:50,717 INFO     23888 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:36:51,429 INFO     23888 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2025-12-18 15:36:55,427 INFO     23888 Processing request of type ListToolsRequest

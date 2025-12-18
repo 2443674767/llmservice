@@ -3,6 +3,8 @@ import os
 import secrets
 from datetime import date
 
+import dotenv
+
 # import rag.utils
 # import rag.utils.es_conn
 # import rag.utils.infinity_conn
@@ -27,6 +29,17 @@ EMBEDDING_MDL = ""
 RERANK_MDL = ""
 ASR_MDL = ""
 IMAGE2TEXT_MDL = ""
+
+# 本地
+OLLAMA_API_KEY = None
+OLLAMA_URL = None
+EMBEDDING_OLLAMA_MODEL = None
+TOOLS_OLLAMA_MODEL = None
+DEEPSEEK_OLLAMA_MODEL = None
+
+# MCP
+MCP_HOST = ""
+MCP_PORT = 0
 
 CHAT_CFG = ""
 EMBEDDING_CFG = ""
@@ -120,6 +133,7 @@ def init_settings():
     """
     # 初始化数据库类型和数据库配置
     global DATABASE_TYPE, DATABASE
+    dotenv.load_dotenv()
     DATABASE_TYPE = os.getenv("DB_TYPE", "mysql")   # 默认为mysql
     DATABASE = decrypt_database_config(name=DATABASE_TYPE)
 
@@ -130,6 +144,14 @@ def init_settings():
     LLM_FACTORY = llm_settings.get("factory", "") or ""
     LLM_BASE_URL = llm_settings.get("base_url", "") or ""
     ALLOWED_LLM_FACTORIES = llm_settings.get("allowed_factories", None)
+
+    # 本地模型
+    global EMBEDDING_OLLAMA_MODEL, TOOLS_OLLAMA_MODEL, DEEPSEEK_OLLAMA_MODEL
+    EMBEDDING_OLLAMA_MODEL = os.getenv("EMBEDDING_OLLAMA_MODEL", "")
+    TOOLS_OLLAMA_MODEL = os.getenv("TOOLS_OLLAMA_MODEL", "")
+    DEEPSEEK_OLLAMA_MODEL = os.getenv("DEEPSEEK_OLLAMA_MODEL", "")
+    MCP_HOST = os.getenv("MCP_HOST", "")
+    MCP_PORT = os.getenv("MCP_PORT", "")
 
     # 注册功能是否开启
     global REGISTER_ENABLED
