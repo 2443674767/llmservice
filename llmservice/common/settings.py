@@ -92,6 +92,9 @@ EMBEDDING_BATCH_SIZE: int = 16
 STORAGE_IMPL_TYPE = os.getenv('STORAGE_IMPL', 'MINIO')
 STORAGE_IMPL = None
 
+LANGSMITH_MANAGER = None
+LANGGRAPH_MANAGER = None
+
 
 def _get_or_create_secret_key():
     secret_key = os.environ.get("RAGFLOW_SECRET_KEY")

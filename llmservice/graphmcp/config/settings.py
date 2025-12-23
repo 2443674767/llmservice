@@ -24,6 +24,9 @@ class Settings:
     MCP_HOST = os.getenv("MCP_HOST", "0.0.0.0")
     MCP_PORT = int(os.getenv("MCP_PORT", "8000"))
 
+    # LangSmith 配置
+    # LANGSMITH_MANAGER = os.getenv("LANGSMITH_MANAGER", "")
+
 
 settings = Settings()
 
