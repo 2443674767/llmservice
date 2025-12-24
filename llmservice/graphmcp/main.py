@@ -4,9 +4,10 @@ import logging
 from langchain_ollama import ChatOllama
 
 from common.log_utils import init_root_logger
-from config.settings import settings
+from config.settings import settings, init_setting
 from agents.sql_agent.agent import SQLAgent
 from agents.weather_agent.agent import WeatherAgent
+from graphmcp.core import LangsmithManager, LangGraphManager
 from graphmcp.core.mcp_server import MCPServerBase
 
 # 加载环境变量
@@ -25,6 +26,13 @@ def create_llm():
         reasoning=False,
         base_url=settings.OLLAMA_BASE_URL,
     )
+    # 启用LangSmith 添加回调管理
+    if settings.LANGSMITH_MANAGER and settings.LANGSMITH_MANAGER.is_enabled():
+        callback_manager = settings.LANGSMITH_MANAGER.get_callback_manager()
+        if callback_manager:
+            llm.callbacks = callback_manager
+            logging.info("LangSmith 追踪应用语言模型")
+
     return llm
 
 
@@ -40,9 +48,18 @@ def main():
           \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
     """)
 
+    init_setting()
+
     # 创建语言模型
     llm = create_llm()
     logging.info(f"语言模型初始化成功: {settings.OLLAMA_MODEL}")
+
+    # 初始化 LangGraph 管理器
+    if settings.LANGGRAPH_ENABLED:
+        settings.LANGGRAPH_MANAGER = LangGraphManager(llm=llm)
+        logging.info("LangGraph 管理器已初始化")
+    else:
+        logging.info("LangGraph 已禁用")
 
     # 创建 MCP 服务器
     mcp_server = MCPServerBase(
