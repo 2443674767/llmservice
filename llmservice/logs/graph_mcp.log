@@ -89,3 +89,423 @@
 2025-12-18 17:11:46,820 INFO     25792 Processing request of type CallToolRequest
 2025-12-18 17:11:46,927 INFO     25792 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
 2025-12-18 17:11:46,982 INFO     25792 Processing request of type ListToolsRequest
+2026-01-19 11:18:40,097 INFO     15324 graph_mcp log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2026-01-19 11:18:40,099 INFO     15324 初始化 MCP Agent 微服务...
+2026-01-19 11:18:40,099 INFO     15324 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2026-01-19 11:18:40,099 ERROR    15324 LangSmith 追踪初始化失败: object.__init__() takes exactly one argument (the instance to initialize)
+2026-01-19 11:18:40,099 WARNING  15324 LangSmith 追踪未启用（请检查 LANGCHAIN_API_KEY 环境变量）
+2026-01-19 11:18:40,115 INFO     15324 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2026-01-19 11:19:16,013 INFO     20752 graph_mcp log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2026-01-19 11:19:16,014 INFO     20752 初始化 MCP Agent 微服务...
+2026-01-19 11:19:16,014 INFO     20752 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2026-01-19 11:19:16,014 ERROR    20752 LangSmith 追踪初始化失败: object.__init__() takes exactly one argument (the instance to initialize)
+2026-01-19 11:19:16,014 WARNING  20752 LangSmith 追踪未启用（请检查 LANGCHAIN_API_KEY 环境变量）
+2026-01-19 11:19:16,030 INFO     20752 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2026-01-19 11:19:16,030 INFO     20752 语言模型初始化成功: llama3.1:8b
+2026-01-19 11:19:36,681 INFO     26820 graph_mcp log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2026-01-19 11:19:36,681 INFO     26820 初始化 MCP Agent 微服务...
+2026-01-19 11:19:36,681 INFO     26820 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2026-01-19 11:19:36,681 ERROR    26820 LangSmith 追踪初始化失败: object.__init__() takes exactly one argument (the instance to initialize)
+2026-01-19 11:19:36,681 WARNING  26820 LangSmith 追踪未启用（请检查 LANGCHAIN_API_KEY 环境变量）
+2026-01-19 11:19:36,698 INFO     26820 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2026-01-19 11:19:36,698 INFO     26820 语言模型初始化成功: llama3.1:8b
+2026-01-19 11:19:37,450 INFO     26820 SQL Agent 注册成功
+2026-01-19 11:19:37,450 INFO     26820 Weather Agent 注册成功
+2026-01-19 11:21:53,844 INFO     26820 Processing request of type ListToolsRequest
+2026-01-19 11:23:03,735 INFO     26820 Processing request of type CallToolRequest
+2026-01-19 11:23:04,130 INFO     26820 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-19 11:23:04,225 INFO     26820 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-19 11:23:04,309 INFO     26820 Processing request of type ListToolsRequest
+2026-01-19 13:49:32,852 INFO     26820 Processing request of type CallToolRequest
+2026-01-19 13:49:33,139 INFO     26820 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-19 13:49:33,232 INFO     26820 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-19 13:49:33,565 INFO     26820 Processing request of type ListToolsRequest
+2026-01-19 13:49:33,868 INFO     26820 Processing request of type CallToolRequest
+2026-01-19 13:49:34,185 INFO     26820 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-19 13:49:34,280 INFO     26820 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-19 13:49:34,664 INFO     26820 Processing request of type ListToolsRequest
+2026-01-19 13:49:56,112 INFO     26820 Processing request of type CallToolRequest
+2026-01-19 13:49:56,456 INFO     26820 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-19 13:49:56,550 INFO     26820 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-19 13:49:57,116 INFO     26820 Processing request of type ListToolsRequest
+2026-01-19 13:49:57,460 INFO     26820 Processing request of type CallToolRequest
+2026-01-19 13:49:57,761 INFO     26820 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-19 13:49:57,856 INFO     26820 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-19 13:49:58,524 INFO     26820 Processing request of type ListToolsRequest
+2026-01-19 13:51:04,866 INFO     26820 Processing request of type CallToolRequest
+2026-01-19 13:51:05,116 INFO     26820 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-19 13:51:05,211 INFO     26820 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-19 13:51:06,631 INFO     26820 Processing request of type ListToolsRequest
+2026-01-21 14:32:56,493 INFO     11468 graph_mcp log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2026-01-21 14:32:56,506 INFO     11468 初始化 MCP Agent 微服务...
+2026-01-21 14:32:56,524 INFO     11468 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2026-01-21 14:32:56,524 ERROR    11468 LangSmith 追踪初始化失败: object.__init__() takes exactly one argument (the instance to initialize)
+2026-01-21 14:32:56,525 WARNING  11468 LangSmith 追踪未启用（请检查 LANGCHAIN_API_KEY 环境变量）
+2026-01-21 14:33:41,534 INFO     7960 graph_mcp log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2026-01-21 14:33:41,534 INFO     7960 初始化 MCP Agent 微服务...
+2026-01-21 14:33:41,534 INFO     7960 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2026-01-21 14:33:41,534 ERROR    7960 LangSmith 追踪初始化失败: object.__init__() takes exactly one argument (the instance to initialize)
+2026-01-21 14:33:41,534 WARNING  7960 LangSmith 追踪未启用（请检查 LANGCHAIN_API_KEY 环境变量）
+2026-01-21 14:33:41,560 INFO     7960 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2026-01-21 14:33:41,572 INFO     7960 语言模型初始化成功: llama3.1:8b
+2026-01-21 14:33:42,453 INFO     7960 SQL Agent 注册成功
+2026-01-21 14:33:42,453 INFO     7960 Weather Agent 注册成功
+2026-01-21 14:36:37,090 INFO     7128 graph_mcp log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2026-01-21 14:36:37,090 INFO     7128 初始化 MCP Agent 微服务...
+2026-01-21 14:36:37,090 INFO     7128 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2026-01-21 14:36:37,090 ERROR    7128 LangSmith 追踪初始化失败: object.__init__() takes exactly one argument (the instance to initialize)
+2026-01-21 14:36:37,090 WARNING  7128 LangSmith 追踪未启用（请检查 LANGCHAIN_API_KEY 环境变量）
+2026-01-21 14:36:37,106 INFO     7128 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2026-01-21 14:36:37,106 INFO     7128 语言模型初始化成功: llama3.1:8b
+2026-01-21 14:36:37,643 INFO     7128 SQL Agent 注册成功
+2026-01-21 14:36:37,643 INFO     7128 Weather Agent 注册成功
+2026-01-21 14:37:38,703 INFO     27992 graph_mcp log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2026-01-21 14:37:38,703 INFO     27992 初始化 MCP Agent 微服务...
+2026-01-21 14:37:38,703 INFO     27992 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2026-01-21 14:37:38,703 ERROR    27992 LangSmith 追踪初始化失败: object.__init__() takes exactly one argument (the instance to initialize)
+2026-01-21 14:37:38,703 WARNING  27992 LangSmith 追踪未启用（请检查 LANGCHAIN_API_KEY 环境变量）
+2026-01-21 14:37:38,719 INFO     27992 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2026-01-21 14:37:38,719 INFO     27992 语言模型初始化成功: llama3.1:8b
+2026-01-21 14:37:39,278 INFO     27992 SQL Agent 注册成功
+2026-01-21 14:37:39,278 INFO     27992 Weather Agent 注册成功
+2026-01-21 14:49:10,588 INFO     11480 graph_mcp log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2026-01-21 14:49:10,588 INFO     11480 初始化 MCP Agent 微服务...
+2026-01-21 14:49:10,589 INFO     11480 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2026-01-21 14:49:10,589 ERROR    11480 LangSmith 追踪初始化失败: object.__init__() takes exactly one argument (the instance to initialize)
+2026-01-21 14:49:10,589 WARNING  11480 LangSmith 追踪未启用（请检查 LANGCHAIN_API_KEY 环境变量）
+2026-01-21 14:49:10,605 INFO     11480 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2026-01-21 14:49:10,605 INFO     11480 语言模型初始化成功: llama3.1:8b
+2026-01-21 14:49:11,147 INFO     11480 SQL Agent 注册成功
+2026-01-21 14:49:11,147 INFO     11480 Weather Agent 注册成功
+2026-01-21 14:49:11,148 INFO     11480 Go MCP Agent 注册成功
+2026-01-21 14:58:23,300 INFO     26992 graph_mcp log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2026-01-21 14:58:23,301 INFO     26992 初始化 MCP Agent 微服务...
+2026-01-21 14:58:23,301 INFO     26992 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2026-01-21 14:58:23,301 ERROR    26992 LangSmith 追踪初始化失败: object.__init__() takes exactly one argument (the instance to initialize)
+2026-01-21 14:58:23,301 WARNING  26992 LangSmith 追踪未启用（请检查 LANGCHAIN_API_KEY 环境变量）
+2026-01-21 14:58:23,318 INFO     26992 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2026-01-21 14:58:23,318 INFO     26992 语言模型初始化成功: llama3.1:8b
+2026-01-21 14:58:23,850 INFO     26992 SQL Agent 注册成功
+2026-01-21 14:58:23,850 INFO     26992 Weather Agent 注册成功
+2026-01-21 14:58:23,851 INFO     26992 fcPro MCP Agent 注册成功
+2026-01-21 15:15:56,039 INFO     26992 Processing request of type ListToolsRequest
+2026-01-21 15:16:14,954 INFO     26992 Processing request of type CallToolRequest
+2026-01-21 15:16:14,980 INFO     26992 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:16:14,981 INFO     26992 Received session ID: mcp-session-94c73ff3-6c41-4fdb-878c-7ce7cc348217
+2026-01-21 15:16:14,981 INFO     26992 Negotiated protocol version: 2025-06-18
+2026-01-21 15:16:14,982 INFO     26992 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 202 Accepted"
+2026-01-21 15:16:14,984 INFO     26992 HTTP Request: GET http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:16:14,984 INFO     26992 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:16:14,987 INFO     26992 HTTP Request: DELETE http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:16:15,204 INFO     26992 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:16:15,215 INFO     26992 Processing request of type ListToolsRequest
+2026-01-21 15:19:02,829 INFO     26992 Processing request of type ListToolsRequest
+2026-01-21 15:19:40,902 INFO     26992 Processing request of type CallToolRequest
+2026-01-21 15:19:41,119 INFO     26992 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:19:41,131 INFO     26992 Processing request of type ListToolsRequest
+2026-01-21 15:20:17,051 INFO     26992 Processing request of type CallToolRequest
+2026-01-21 15:20:17,241 INFO     26992 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:20:17,252 INFO     26992 Processing request of type ListToolsRequest
+2026-01-21 15:21:44,037 INFO     26992 Processing request of type CallToolRequest
+2026-01-21 15:21:44,234 INFO     26992 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:21:44,245 INFO     26992 Processing request of type ListToolsRequest
+2026-01-21 15:41:05,985 INFO     26992 Processing request of type CallToolRequest
+2026-01-21 15:41:06,300 INFO     26992 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:41:06,394 INFO     26992 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:41:06,548 INFO     26992 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:41:06,956 INFO     26992 Processing request of type ListToolsRequest
+2026-01-21 15:41:44,067 INFO     26992 Processing request of type CallToolRequest
+2026-01-21 15:41:44,260 INFO     26992 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:41:44,271 INFO     26992 Processing request of type ListToolsRequest
+2026-01-21 15:47:58,088 INFO     15576 graph_mcp log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2026-01-21 15:47:58,088 INFO     15576 初始化 MCP Agent 微服务...
+2026-01-21 15:47:58,089 INFO     15576 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2026-01-21 15:47:58,089 ERROR    15576 LangSmith 追踪初始化失败: object.__init__() takes exactly one argument (the instance to initialize)
+2026-01-21 15:47:58,089 WARNING  15576 LangSmith 追踪未启用（请检查 LANGCHAIN_API_KEY 环境变量）
+2026-01-21 15:47:58,106 INFO     15576 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2026-01-21 15:47:58,106 INFO     15576 语言模型初始化成功: llama3.1:8b
+2026-01-21 15:47:58,647 INFO     15576 SQL Agent 注册成功
+2026-01-21 15:47:58,647 INFO     15576 Weather Agent 注册成功
+2026-01-21 15:47:58,647 INFO     15576 fcPro MCP Agent 注册成功
+2026-01-21 15:48:06,924 INFO     15576 Processing request of type ListToolsRequest
+2026-01-21 15:48:30,545 INFO     15576 Processing request of type CallToolRequest
+2026-01-21 15:48:30,555 INFO     15576 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:48:30,555 INFO     15576 Received session ID: mcp-session-f584bf87-9bea-47f5-acdc-db61ff70ee98
+2026-01-21 15:48:30,555 INFO     15576 Negotiated protocol version: 2025-06-18
+2026-01-21 15:48:30,557 INFO     15576 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 202 Accepted"
+2026-01-21 15:48:30,558 INFO     15576 HTTP Request: GET http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:48:30,560 INFO     15576 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:48:30,561 INFO     15576 HTTP Request: DELETE http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:48:30,787 INFO     15576 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:48:30,804 INFO     15576 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:48:30,804 INFO     15576 Received session ID: mcp-session-3745924b-1c45-497f-a326-b3d078df98ff
+2026-01-21 15:48:30,804 INFO     15576 Negotiated protocol version: 2025-06-18
+2026-01-21 15:48:30,806 INFO     15576 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 202 Accepted"
+2026-01-21 15:48:30,807 INFO     15576 HTTP Request: GET http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:48:30,875 INFO     15576 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:48:30,879 INFO     15576 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:48:30,881 INFO     15576 HTTP Request: DELETE http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:48:31,260 INFO     15576 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:48:32,303 INFO     15576 Processing request of type ListToolsRequest
+2026-01-21 15:49:42,883 INFO     15576 Processing request of type CallToolRequest
+2026-01-21 15:49:43,250 INFO     15576 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:49:43,352 INFO     15576 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:49:43,759 INFO     15576 Processing request of type ListToolsRequest
+2026-01-21 15:50:05,537 INFO     15576 Processing request of type CallToolRequest
+2026-01-21 15:50:05,765 INFO     15576 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:50:05,781 INFO     15576 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:50:05,781 INFO     15576 Received session ID: mcp-session-512e84c4-dafd-4f71-bb3c-7ee23173b5a0
+2026-01-21 15:50:05,781 INFO     15576 Negotiated protocol version: 2025-06-18
+2026-01-21 15:50:05,783 INFO     15576 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 202 Accepted"
+2026-01-21 15:50:05,784 INFO     15576 HTTP Request: GET http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:50:05,792 INFO     15576 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:50:05,795 INFO     15576 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:50:05,795 INFO     15576 HTTP Request: DELETE http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:50:06,174 INFO     15576 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:50:07,065 INFO     15576 Processing request of type ListToolsRequest
+2026-01-21 15:51:00,634 INFO     6912 graph_mcp log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2026-01-21 15:51:00,635 INFO     6912 初始化 MCP Agent 微服务...
+2026-01-21 15:51:00,635 INFO     6912 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2026-01-21 15:51:00,635 ERROR    6912 LangSmith 追踪初始化失败: object.__init__() takes exactly one argument (the instance to initialize)
+2026-01-21 15:51:00,635 WARNING  6912 LangSmith 追踪未启用（请检查 LANGCHAIN_API_KEY 环境变量）
+2026-01-21 15:51:00,651 INFO     6912 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2026-01-21 15:51:00,652 INFO     6912 语言模型初始化成功: llama3.1:8b
+2026-01-21 15:51:00,657 INFO     6912 fcPro MCP Agent 注册成功
+2026-01-21 15:51:07,748 INFO     6912 Processing request of type ListToolsRequest
+2026-01-21 15:51:48,670 INFO     6912 Processing request of type CallToolRequest
+2026-01-21 15:51:48,681 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:51:48,681 INFO     6912 Received session ID: mcp-session-c7311e73-f0c5-4803-bf2a-684f50e85795
+2026-01-21 15:51:48,681 INFO     6912 Negotiated protocol version: 2025-06-18
+2026-01-21 15:51:48,683 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 202 Accepted"
+2026-01-21 15:51:48,684 INFO     6912 HTTP Request: GET http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:51:48,687 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:51:48,688 INFO     6912 HTTP Request: DELETE http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:51:48,879 INFO     6912 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:51:48,896 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:51:48,896 INFO     6912 Received session ID: mcp-session-190f354f-f43f-4331-b01d-397ab6f2eb0d
+2026-01-21 15:51:48,896 INFO     6912 Negotiated protocol version: 2025-06-18
+2026-01-21 15:51:48,898 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 202 Accepted"
+2026-01-21 15:51:48,899 INFO     6912 HTTP Request: GET http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:51:48,904 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:51:48,905 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:51:48,907 INFO     6912 HTTP Request: DELETE http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:51:49,284 INFO     6912 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:51:50,403 INFO     6912 Processing request of type ListToolsRequest
+2026-01-21 15:51:52,163 INFO     6912 Processing request of type CallToolRequest
+2026-01-21 15:51:52,398 INFO     6912 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:51:52,416 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:51:52,416 INFO     6912 Received session ID: mcp-session-e9f9dbc3-d9b7-44b3-9c2d-999a99810382
+2026-01-21 15:51:52,416 INFO     6912 Negotiated protocol version: 2025-06-18
+2026-01-21 15:51:52,418 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 202 Accepted"
+2026-01-21 15:51:52,419 INFO     6912 HTTP Request: GET http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:51:52,423 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:51:52,425 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:51:52,427 INFO     6912 HTTP Request: DELETE http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:51:52,816 INFO     6912 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:51:53,700 INFO     6912 Processing request of type ListToolsRequest
+2026-01-21 15:52:23,469 INFO     6912 Processing request of type CallToolRequest
+2026-01-21 15:52:23,662 INFO     6912 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:52:23,679 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:52:23,679 INFO     6912 Received session ID: mcp-session-01d2780d-6cfe-4e36-a087-477f1f9d6267
+2026-01-21 15:52:23,679 INFO     6912 Negotiated protocol version: 2025-06-18
+2026-01-21 15:52:23,681 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 202 Accepted"
+2026-01-21 15:52:23,683 INFO     6912 HTTP Request: GET http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:52:23,689 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:52:23,691 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:52:23,692 INFO     6912 HTTP Request: DELETE http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:52:24,073 INFO     6912 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:52:24,744 INFO     6912 Processing request of type ListToolsRequest
+2026-01-21 15:57:24,789 INFO     6912 Processing request of type CallToolRequest
+2026-01-21 15:57:24,988 INFO     6912 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:57:25,005 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:57:25,005 INFO     6912 Received session ID: mcp-session-7f643c81-e2d9-4e09-8c71-3bd8eec36bac
+2026-01-21 15:57:25,006 INFO     6912 Negotiated protocol version: 2025-06-18
+2026-01-21 15:57:25,007 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 202 Accepted"
+2026-01-21 15:57:25,008 INFO     6912 HTTP Request: GET http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:57:25,014 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:57:25,016 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:57:25,017 INFO     6912 HTTP Request: DELETE http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 15:57:25,397 INFO     6912 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 15:57:27,694 INFO     6912 Processing request of type ListToolsRequest
+2026-01-21 16:24:14,023 INFO     6912 Processing request of type CallToolRequest
+2026-01-21 16:24:14,245 INFO     6912 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 16:24:14,263 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 16:24:14,263 INFO     6912 Received session ID: mcp-session-8ec7ceef-11c6-441b-b034-dc0ac74e12ff
+2026-01-21 16:24:14,264 INFO     6912 Negotiated protocol version: 2025-06-18
+2026-01-21 16:24:14,265 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 202 Accepted"
+2026-01-21 16:24:14,266 INFO     6912 HTTP Request: GET http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 16:24:14,271 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 16:24:14,273 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 16:24:14,274 INFO     6912 HTTP Request: DELETE http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 16:24:14,655 INFO     6912 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 16:24:15,412 INFO     6912 Processing request of type ListToolsRequest
+2026-01-21 16:24:49,903 INFO     6912 Processing request of type CallToolRequest
+2026-01-21 16:24:50,201 INFO     6912 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 16:24:50,218 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 16:24:50,219 INFO     6912 Received session ID: mcp-session-8333e8e9-4a70-44d6-b9c7-4ffd7f9548e1
+2026-01-21 16:24:50,219 INFO     6912 Negotiated protocol version: 2025-06-18
+2026-01-21 16:24:50,220 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 202 Accepted"
+2026-01-21 16:24:50,221 INFO     6912 HTTP Request: GET http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 16:24:50,225 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 16:24:50,228 INFO     6912 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 16:24:50,229 INFO     6912 HTTP Request: DELETE http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-21 16:24:50,610 INFO     6912 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-21 16:24:53,850 INFO     6912 Processing request of type ListToolsRequest
+2026-01-22 08:50:38,424 INFO     27808 graph_mcp log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2026-01-22 08:50:38,434 INFO     27808 初始化 MCP Agent 微服务...
+2026-01-22 08:50:38,445 INFO     27808 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2026-01-22 08:50:38,445 ERROR    27808 LangSmith 追踪初始化失败: object.__init__() takes exactly one argument (the instance to initialize)
+2026-01-22 08:50:38,446 WARNING  27808 LangSmith 追踪未启用（请检查 LANGCHAIN_API_KEY 环境变量）
+2026-01-22 08:51:32,430 INFO     14568 graph_mcp log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2026-01-22 08:51:32,430 INFO     14568 初始化 MCP Agent 微服务...
+2026-01-22 08:51:32,430 INFO     14568 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2026-01-22 08:51:32,430 ERROR    14568 LangSmith 追踪初始化失败: object.__init__() takes exactly one argument (the instance to initialize)
+2026-01-22 08:51:32,430 WARNING  14568 LangSmith 追踪未启用（请检查 LANGCHAIN_API_KEY 环境变量）
+2026-01-22 08:51:32,465 INFO     14568 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2026-01-22 08:51:32,468 INFO     14568 语言模型初始化成功: llama3.1:8b
+2026-01-22 08:51:32,528 INFO     14568 fcPro MCP Agent 注册成功
+2026-01-22 08:51:43,576 INFO     14568 Processing request of type ListToolsRequest
+2026-01-22 08:52:18,440 INFO     14568 Processing request of type CallToolRequest
+2026-01-22 08:52:18,464 INFO     14568 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-22 08:52:18,464 INFO     14568 Received session ID: mcp-session-43559038-5a8b-4fba-827e-cbb3e2b85b4a
+2026-01-22 08:52:18,465 INFO     14568 Negotiated protocol version: 2025-06-18
+2026-01-22 08:52:18,468 INFO     14568 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 202 Accepted"
+2026-01-22 08:52:18,469 INFO     14568 HTTP Request: GET http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-22 08:52:18,471 INFO     14568 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-22 08:52:18,472 INFO     14568 HTTP Request: DELETE http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-22 08:52:18,736 INFO     14568 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-22 08:52:18,757 INFO     14568 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-22 08:52:18,757 INFO     14568 Received session ID: mcp-session-34c78090-d989-44ca-9f91-cdf6e9d88a76
+2026-01-22 08:52:18,757 INFO     14568 Negotiated protocol version: 2025-06-18
+2026-01-22 08:52:18,759 INFO     14568 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 202 Accepted"
+2026-01-22 08:52:18,760 INFO     14568 HTTP Request: GET http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-22 08:52:18,780 INFO     14568 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-22 08:52:18,781 INFO     14568 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-22 08:52:18,782 INFO     14568 HTTP Request: DELETE http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-22 08:52:18,900 INFO     14568 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-22 08:52:19,299 INFO     14568 Processing request of type ListToolsRequest
+2026-01-22 16:34:02,962 INFO     20768 graph_mcp log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2026-01-22 16:34:02,963 INFO     20768 初始化 MCP Agent 微服务...
+2026-01-22 16:34:02,963 INFO     20768 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2026-01-22 16:34:02,963 ERROR    20768 LangSmith 追踪初始化失败: object.__init__() takes exactly one argument (the instance to initialize)
+2026-01-22 16:34:02,963 WARNING  20768 LangSmith 追踪未启用（请检查 LANGCHAIN_API_KEY 环境变量）
+2026-01-22 16:34:02,977 INFO     20768 HTTP Request: GET http://192.168.1.128:9300/api/tags "HTTP/1.1 404 Not Found"
+2026-01-22 16:35:07,675 INFO     19472 graph_mcp log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2026-01-22 16:35:07,675 INFO     19472 初始化 MCP Agent 微服务...
+2026-01-22 16:35:07,675 INFO     19472 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2026-01-22 16:35:07,675 ERROR    19472 LangSmith 追踪初始化失败: object.__init__() takes exactly one argument (the instance to initialize)
+2026-01-22 16:35:07,675 WARNING  19472 LangSmith 追踪未启用（请检查 LANGCHAIN_API_KEY 环境变量）
+2026-01-22 16:35:07,690 INFO     19472 HTTP Request: GET http://192.168.1.147:11434/api/tags "HTTP/1.1 200 OK"
+2026-01-22 16:35:07,690 INFO     19472 语言模型初始化成功: llama3.1:8b
+2026-01-22 16:35:07,696 INFO     19472 fcPro MCP Agent 注册成功
+2026-01-22 16:35:18,313 INFO     19472 Processing request of type ListToolsRequest
+2026-01-22 16:37:12,883 INFO     19472 Processing request of type ListToolsRequest
+2026-01-22 16:38:58,987 INFO     19472 Processing request of type CallToolRequest
+2026-01-22 16:38:58,998 INFO     19472 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-22 16:38:58,999 INFO     19472 Received session ID: mcp-session-9a6a828c-b856-4d7d-918e-95c35b4f4033
+2026-01-22 16:38:58,999 INFO     19472 Negotiated protocol version: 2025-06-18
+2026-01-22 16:38:59,001 INFO     19472 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 202 Accepted"
+2026-01-22 16:38:59,002 INFO     19472 HTTP Request: GET http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-22 16:38:59,003 INFO     19472 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-22 16:38:59,004 INFO     19472 HTTP Request: DELETE http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-22 16:48:34,582 INFO     19472 HTTP Request: POST http://192.168.1.147:11434/api/chat "HTTP/1.1 200 OK"
+2026-01-22 16:48:35,476 INFO     19472 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-22 16:48:35,476 INFO     19472 Received session ID: mcp-session-472b4900-fe55-4faa-9d1e-89c650317988
+2026-01-22 16:48:35,476 INFO     19472 Negotiated protocol version: 2025-06-18
+2026-01-22 16:48:35,478 INFO     19472 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 202 Accepted"
+2026-01-22 16:48:35,478 INFO     19472 HTTP Request: GET http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-22 16:48:35,517 INFO     19472 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-22 16:48:35,519 INFO     19472 HTTP Request: POST http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-22 16:48:35,521 INFO     19472 HTTP Request: DELETE http://192.168.1.128:9300/mcp "HTTP/1.1 200 OK"
+2026-01-22 16:54:39,462 INFO     19472 HTTP Request: POST http://192.168.1.147:11434/api/chat "HTTP/1.1 200 OK"
+2026-01-22 16:55:31,586 INFO     19472 Processing request of type ListToolsRequest

@@ -75,3 +75,19 @@ class AgentBase(ABC):
             **kwargs
         )
 
+    async def aexecute(self, query: str, **kwargs) -> Dict[str, Any]:
+        """
+        异步执行查询
+
+        :param query: 用户查询
+        :param kwargs: 其他参数
+        :return: 执行结果
+        """
+        if self.agent_executor is None:
+            self.agent_executor = self.create_agent()
+
+        result = await self.agent_executor.ainvoke(
+            {"messages": [{"role": "user", "content": query}]},
+            **kwargs
+        )
+        return result

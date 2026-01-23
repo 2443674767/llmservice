@@ -38,16 +38,23 @@ class MCPServerBase:
 
         :param agent: Agent 实例
         """
+        import asyncio
 
-        def agent_query(query: str) -> str:
+        async def agent_query(query: str) -> str:
             """
-            执行 Agent 查询
+            执行 Agent 查询（异步版本）
 
             :param query: 用户查询
             :return: Agent 执行结果
             """
             try:
-                result = agent.execute(query)
+                # 检查agent是否有异步execute方法
+                if hasattr(agent, 'aexecute'):
+                    result = await agent.aexecute(query)
+                else:
+                    # 如果没有异步方法，在事件循环中运行同步方法
+                    result = agent.execute(query)
+
                 # 提取最终答案
                 if isinstance(result, dict) and "messages" in result:
                     messages = result["messages"]
@@ -59,13 +66,15 @@ class MCPServerBase:
                 return str(result)
             except Exception as e:
                 logger.error(f"Agent {agent.name} 执行错误: {e}")
+                import traceback
+                logger.debug(f"详细错误:\n{traceback.format_exc()}")
                 return f"错误: {str(e)}"
 
         # 设置工具名称和描述
         agent_query.__name__ = f"{agent.name}_query"
         agent_query.__doc__ = f"{agent.description}\n\n:param query: 用户查询\n:return: 执行结果"
 
-        # 注册为 MCP 工具
+        # 注册为 MCP 工具（FastMCP支持异步工具）
         self.mcp.tool()(agent_query)
 
         return agent_query

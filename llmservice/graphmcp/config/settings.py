@@ -60,6 +60,13 @@ class Settings:
     MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD", "")
     MYSQL_DATABASE = os.getenv("MYSQL_DATABASE", "")
 
+    PG_HOST = os.getenv("PG_HOST", "localhost")
+    PG_PORT = int(os.getenv("PG_PORT", "5432"))
+    PG_USER = os.getenv("PG_USER", "myuser")
+    PG_PASSWORD = os.getenv("PG_PASSWORD", "mypassword")
+    PG_DATABASE = os.getenv("PG_DATABASE", "mydb")
+    PG_VECTOR_ENABLED = os.getenv("PG_VECTOR_ENABLED", "true").lower() == "true"
+
     # MCP 服务器配置
     MCP_HOST = os.getenv("MCP_HOST", "0.0.0.0")
     MCP_PORT = int(os.getenv("MCP_PORT", "8000"))
