@@ -49,7 +49,7 @@ class Settings:
     """应用配置类"""
 
     # LLM 配置
-    OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:12356")
+    OLLAMA_BASE_URL = os.getenv("OLLAMA_URL", "http://localhost:12356")
     OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.1:8b")
 
     # 数据库配置

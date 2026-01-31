@@ -1,16 +1,19 @@
 import asyncio
+import logging
 from typing import Any, List, Optional, Dict
 
 from langchain_classic.agents import AgentExecutor
-from loguru import logger
 from langchain_mcp_adapters.client import MultiServerMCPClient
 
 from graphmcp.agents.go_mcp_agent.config import GoMCPAgentConfig
 from graphmcp.core.agent_base import AgentBase
 from langchain_core.language_models import BaseChatModel
 
+from graphmcp.core.embedding_service import EmbeddingService
 from graphmcp.core.intent_recognizer import Intent
 from graphmcp.core.tool_router import ToolRouter
+from graphmcp.core.vector_store import VectorStore
+from graphmcp.config.settings import settings
 
 
 class GoMCPAgent(AgentBase):
@@ -25,7 +28,7 @@ class GoMCPAgent(AgentBase):
         super().__init__(
             llm=llm,
             name="fcPro_mcp_agent",
-            description="fcPro MCP服务代理，可以调用fcPro MCP服务器提供的所有工具"
+            description="fcPro MCP服务代理，可以调用fcPro MCP服务器提供的所有工具,使用 PostgreSQL 对所有数据存储"
         )
         self.config = GoMCPAgentConfig()
 
@@ -35,6 +38,16 @@ class GoMCPAgent(AgentBase):
         self.mcp_client: MultiServerMCPClient = None
         self._all_tools: List[Any] = None   # 工具列表
         self.tool_router = ToolRouter(max_tools=5)  # # 工具路由器，最多返回5个工具
+        self.vector_store: Optional[VectorStore] = None
+        self.embedding_service: Optional[EmbeddingService] = None
+        if settings.PG_VECTOR_ENABLED:
+            try:
+                self.vector_store = VectorStore()
+                self.embedding_service = EmbeddingService()
+                if self.vector_store.is_enabled() and self.embedding_service.is_available():
+                    logging.info("fcPro MCP Agent 已启用工具向量化功能")
+            except Exception as e:
+                logging.warning(f"初始化向量化服务失败: {e}")
 
     async def _initialize_mcp_client(self):
         """
@@ -47,10 +60,12 @@ class GoMCPAgent(AgentBase):
                 server_config = self.config.get_server_config()
                 self.mcp_client = MultiServerMCPClient(server_config)
                 self._all_tools = await self.mcp_client.get_tools()
-                logger.info(
+                logging.info(
                     f" fcPro MCP Agent 已连接服务器，加载了 {len(self._all_tools)} 个工具：{[t.name for t in self._all_tools]}")
+                if self.vector_store and self.vector_store.is_enabled() and self.embedding_service and self.embedding_service.is_available():
+                    self._vectorize_tools()
             except Exception as e:
-                logger.error(f"fcPro MCP Agent 连接服务器失败: {e}")
+                logging.error(f"fcPro MCP Agent 连接服务器失败: {e}")
                 raise
 
     def _sync_initialize_mcp_client(self):
@@ -69,7 +84,7 @@ class GoMCPAgent(AgentBase):
                             nest_asyncio.apply()
                             loop.run_until_complete(self._initialize_mcp_client())
                         except ImportError:
-                            logger.warning("nest_asyncio未安装，尝试创建新的事件循环")
+                            logging.warning("nest_asyncio未安装，尝试创建新的事件循环")
                             # 如果没有nest_asyncio，创建新的事件循环
                             new_loop = asyncio.new_event_loop()
                             asyncio.set_event_loop(new_loop)
@@ -88,7 +103,7 @@ class GoMCPAgent(AgentBase):
                     finally:
                         loop.close()
             except Exception as e:
-                logger.error(f"fcPro MCP Agent 同步初始化失败: {e}")
+                logging.error(f"fcPro MCP Agent 同步初始化失败: {e}")
                 # 如果初始化失败，使用空工具列表
                 self._all_tools = []
 
@@ -138,10 +153,10 @@ class GoMCPAgent(AgentBase):
 
         if tools is None:
             tools = self.get_all_tools()
-            logger.warning("未提供工具列表，使用所有工具。建议使用get_filtered_tools()获取筛选后的工具")
+            logging.warning("未提供工具列表，使用所有工具。建议使用get_filtered_tools()获取筛选后的工具")
 
         if not tools:
-            logger.warning("fcPro MCP Agent 没有可用的工具，请检查fcPro MCP服务是否正常运行")
+            logging.warning("fcPro MCP Agent 没有可用的工具，请检查fcPro MCP服务是否正常运行")
 
         system_prompt = f"""你是一个智能助手，可以通过调用fcPro MCP服务器提供的工具来帮助用户完成任务。
     
@@ -157,7 +172,7 @@ class GoMCPAgent(AgentBase):
             system_prompt=system_prompt,
         )
 
-        logger.info(f"fcPro MCP Agent 创建成功，使用 {len(tools)} 个工具")
+        logging.info(f"fcPro MCP Agent 创建成功，使用 {len(tools)} 个工具")
         return agent
 
     def execute(self, query: str, **kwargs) -> Dict[str, Any]:
@@ -212,6 +227,68 @@ class GoMCPAgent(AgentBase):
         )
         return result
 
+    def _vectorize_tools(self):
+        """
+        将工具向量化并存储到 pgvector
+        默认工具加载自动调用
+        :return:
+        """
+        if not self._all_tools:
+            return
+
+        if not self.vector_store or not self.vector_store.is_enabled():
+            return
+
+        if not self.embedding_service or not self.embedding_service.is_available():
+            return
+
+        try:
+            # 这里提取所有工具元数据
+            tool_metadata_list = []
+            for tool in self._all_tools:
+                metadata = self.tool_router.extract_tool_metadata(tool)
+                if metadata is not None:
+                    tool_metadata_list.append(metadata)
+
+            if not tool_metadata_list:
+                logging.warning("没有可向量化的工具元数据")
+                return
+
+            tool_texts = []
+            for metadata in tool_metadata_list:
+                text_parts = []
+                if metadata.domain:
+                    text_parts.append(f"工具所属组：{metadata.domain}")
+                if metadata.object:
+                    text_parts.append(f"操作对象：{metadata.object}")
+                if metadata.action:
+                    text_parts.append(f"操作类型：{metadata.action}")
+                if metadata.description:
+                    text_parts.append(f"描述：{metadata.description}")
+                tool_text = " ".join(text_parts)
+                tool_texts.append(tool_text)
+
+            logging.info(f"开始为 {len(tool_texts)} 个工具生成向量")
+            embeddings = self.embedding_service.embed_texts(tool_texts)
+
+            # valid_pairs = [(meta, emb) for meta, emb in zip[tuple[Any, Any | None]](tool_metadata_list, embeddings) if emb is not None]
+            valid_pairs: list[tuple[Any, Any | None]] = [(meta, emb) for meta, emb in zip(tool_metadata_list, embeddings) if emb is not None]
+
+
+            if valid_pairs:
+                valid_metadata = [pair[0] for pair in valid_pairs]
+                valid_embeddings = [pair[1] for pair in valid_pairs]
+
+                success = self.vector_store.upsert_tool_embedding(valid_metadata, valid_embeddings)
+                if not success:
+                    logging.warning("工具向量存储失败")
+                else:
+                    logging.info(f"成功向量化工具，并且存储了 {len(valid_metadata)} 个工具")
+            else:
+                logging.warning("没有生成任何工具")
+        except Exception as e:
+            logging.error(f"工具向量失败：{e}")
+
     async def cleanup(self):
         """
         清理资源，关闭MCP客户端连接
@@ -221,6 +298,10 @@ class GoMCPAgent(AgentBase):
         if self.mcp_client:
             try:
                 await self.mcp_client.close()
-                logger.info("fcPro MCP Agent 客户端已关闭")
+                logging.info("fcPro MCP Agent 客户端已关闭")
             except Exception as e:
-                logger.error(f"关闭 fcPro MCP Agent客户端时出错: {e}")
+                logging.error(f"关闭 fcPro MCP Agent客户端时出错: {e}")
+
+        # 关闭向量存储连接
+        if self.vector_store:
+            self.vector_store.close()
