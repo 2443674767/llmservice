@@ -1,8 +1,8 @@
 """意图识别模块 - 从自然语言中提取用户意图"""
+import logging
 from dataclasses import dataclass
 from typing import Optional, List, Dict
 import re
-from loguru import logger
 
 
 @dataclass
@@ -21,7 +21,7 @@ class IntentRecognizer:
         """初始化意图识别器"""
         # Domain关键词映射
         self.domain_keywords = {
-            'device': ['设备', 'device', '硬件', 'hardware'],
+            'device': ['设备', 'device'],
             'channel': ['通道', 'channel', '信道'],
             'communication': ['通信', 'communication', '通讯', '网络'],
             'database': ['数据库', 'database', 'db', '数据'],
@@ -30,8 +30,8 @@ class IntentRecognizer:
 
         # Object关键词映射
         self.object_keywords = {
-            'device': ['设备', 'device', '硬件'],
-            'channel': ['通道', 'channel'],
+            'device_config': ['设备配置', 'device_config'],
+            'channel_config': ['通道配置', 'channel_config'],
             'can': ['can', 'CAN总线'],
             'tcp': ['tcp', 'TCP', '网络连接'],
             'package': ['包', 'package'],
@@ -41,7 +41,7 @@ class IntentRecognizer:
         # Action关键词映射
         self.action_keywords = {
             'list': ['列表', 'list', '查看', '显示', '列出', '查询', '获取'],
-            'enable': ['启用', 'enable', '开启', '打开', '启动', '激活'],
+            # 'enable': ['启用', 'enable', '开启', '打开', '启动', '激活'],
             'disable': ['禁用', 'disable', '关闭', '停止', '停用'],
             'create': ['创建', 'create', '新建', '添加', '增加'],
             'delete': ['删除', 'delete', '移除', '去掉'],
@@ -68,7 +68,7 @@ class IntentRecognizer:
         # 识别Action
         intent.action = self._recognize_action(query_lower)
 
-        logger.debug(f"意图识别结果: {intent}")
+        logging.info(f"意图识别结果: {intent}")
         return intent
 
     def _recognize_domain(self, query: str) -> Optional[str]:

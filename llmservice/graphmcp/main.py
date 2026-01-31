@@ -1,4 +1,6 @@
 """MCP Agent 微服务主启动文件"""
+from datetime import date
+
 import dotenv
 import logging
 from langchain_ollama import ChatOllama
@@ -39,7 +41,9 @@ def create_llm():
 
 def main():
     """主函数"""
-    init_root_logger("graph_mcp")
+    today = date.today()
+    log_path = today.strftime("graph_mcp%Y-%m-%d")
+    init_root_logger(log_path)
     logging.info("初始化 MCP Agent 微服务...")
     logging.info(r"""
            ____   ____       _      ____    _   _   __  __    ____   ____  

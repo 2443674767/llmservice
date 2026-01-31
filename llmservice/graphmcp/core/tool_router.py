@@ -1,9 +1,12 @@
 """Tool Router - 工具路由和筛选模块"""
+import logging
 from typing import List, Dict, Any, Optional
 from dataclasses import dataclass
-from loguru import logger
 
+from graphmcp.config.settings import settings
+from graphmcp.core.embedding_service import EmbeddingService
 from graphmcp.core.intent_recognizer import Intent, IntentRecognizer
+from graphmcp.core.vector_store import VectorStore
 
 
 @dataclass
@@ -18,7 +21,7 @@ class ToolMetadata:
 
 
 class ToolRouter:
-    """工具路由器 - 根据意图筛选3-5个最相关的工具"""
+    """工具路由器 - 根据意图筛选3-5个最相关的工具 增加向量检索"""
 
     def __init__(self, max_tools: int = 5):
         """
@@ -28,6 +31,25 @@ class ToolRouter:
         """
         self.max_tools = max_tools
         self.intent_recognizer = IntentRecognizer()
+        self.vector_store: Optional[VectorStore] = None
+        self.embedding_service: Optional[EmbeddingService] = None
+        self.use_vector_search = settings.PG_VECTOR_ENABLED
+
+        if self.use_vector_search:
+            try:
+                self.vector_store = VectorStore()
+                self.embedding_service = EmbeddingService()
+                if not self.vector_store.is_enabled():
+                    logging.warning("embedding 服务不可用  将使用规则匹配")
+                    self.use_vector_search = False
+                elif not self.embedding_service.is_available():
+                    logging.warning("embedding 服务不可用，使用规则匹配")
+                    self.use_vector_search = False
+                else:
+                    logging.info("tool router 已启用向量检索功能")
+            except Exception as e:
+                logging.warning(f"初始化向量检索失败, 将只使用规则匹配： {e}")
+                self.use_vector_search = False
 
     def extract_tool_metadata(self, tool: Any) -> Optional[ToolMetadata]:
         """
@@ -55,6 +77,12 @@ class ToolRouter:
             if hasattr(tool, 'metadata') and tool.metadata:
                 metadata = tool.metadata
                 if isinstance(metadata, dict):
+                    # if hasattr(metadata, '_meta'):
+                    #     _meta = metadata._meta
+                    #     metadata = _meta
+                    if '_meta' in metadata and isinstance(metadata['_meta'], dict):
+                        metadata = metadata['_meta']
+
                     return ToolMetadata(
                         name=tool_name or metadata.get('name', ''),
                         description=tool_description or metadata.get('Desc', ''),
@@ -93,7 +121,7 @@ class ToolRouter:
                     risk='read'
                 )
         except Exception as e:
-            logger.warning(f"提取工具元数据失败 {tool}: {e}")
+            logging.warning(f"提取工具元数据失败 {tool}: {e}")
 
         return None
 
@@ -118,23 +146,61 @@ class ToolRouter:
         if intent is None:
             intent = self.intent_recognizer.recognize(user_query)
 
-        logger.info(f"识别到的意图: Domain={intent.domain}, Object={intent.object}, Action={intent.action}")
+        logging.info(f"识别到的意图: Domain={intent.domain}, Object={intent.object}, Action={intent.action}")
 
         # 提取所有工具的元数据
         tool_metadata_list = []
+        # tool_name_to_tool = []
         for tool in tools:
             metadata = self.extract_tool_metadata(tool)
             if metadata:
                 tool_metadata_list.append((tool, metadata))
+                # tool_name_to_tool[metadata.name] = tool
             else:
                 # 如果没有元数据，仍然保留但优先级较低
                 tool_metadata_list.append((tool, None))
 
-        # 计算每个工具的匹配分数
+        # 计算每个工具的匹配分数(向量检索)
+        vector_search_results = []
+        if self.use_vector_search and self.vector_store and self.embedding_service:
+            try:
+                # 生成查询向量
+                query_embedding = self.embedding_service.embed_text(user_query)
+                if query_embedding is not None:
+                    # 向量检索
+                    vector_results = self.vector_store.search_similar_tools(
+                        query_embedding=query_embedding,
+                        top_k=self.max_tools * 2,   # 后续再筛选
+                        domain=intent.domain,
+                        object_filter=intent.object,
+                        action_filter=intent.action,
+                    )
+                    vector_search_results = vector_results
+                    logging.info(f"向量检索返回 {len(vector_results)} 个候选工具")
+            except Exception as e:
+                logging.warning(f"向量检索失败,回退到规则匹配: {e}")
+
+        # 计算每个工具的匹配分数(规则匹配)
         scored_tools = []
         for tool, metadata in tool_metadata_list:
             score = self._calculate_match_score(metadata, intent, user_query)
             scored_tools.append((tool, score, metadata))
+
+        # 二次过滤
+        if vector_search_results:
+            # 创建向量相似度映射
+            vector_scores = {tool_name: sim_score for tool_name, sim_score in vector_search_results}
+
+            for i, (tool, rule_score, metadata) in enumerate[Any](scored_tools):
+                if metadata and metadata.name in vector_scores:
+                    vector_score = vector_scores[metadata.name]
+                    # 暂时规则匹配为主，后期需要测试
+                    fused_score = rule_score * 0.6 + vector_score * 0.4
+                    scored_tools[i] = (tool, fused_score, metadata)
+                    logging.info(f"工具 {metadata.name}: 规则={rule_score:.3f},向量={vector_score:.3f}, 融合={fused_score:.3f}")
+                else:
+                    # 向量检索如果没有找到当前工具，那么降低规则匹配的分数
+                    scored_tools[i] = (tool, rule_score * 0.8, metadata)
 
         # 按分数排序，优先返回高分的工具
         scored_tools.sort(key=lambda x: x[1], reverse=True)
@@ -142,10 +208,10 @@ class ToolRouter:
         # 返回前max_tools个工具
         selected_tools = [tool for tool, score, _ in scored_tools[:self.max_tools]]
 
-        logger.info(f"从 {len(tools)} 个工具中筛选出 {len(selected_tools)} 个工具")
+        logging.info(f"从 {len(tools)} 个工具中筛选出 {len(selected_tools)} 个工具")
         if selected_tools:
             selected_names = [self._get_tool_name(t) for t in selected_tools]
-            logger.info(f"选中的工具: {selected_names}")
+            logging.info(f"选中的工具: {selected_names}")
 
         return selected_tools
 

@@ -1,0 +1,62 @@
+2026-01-29 09:08:01,841 INFO     21152 graph_mcp2026-01-29 log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp2026-01-29.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2026-01-29 09:08:01,849 INFO     21152 初始化 MCP Agent 微服务...
+2026-01-29 09:08:01,853 INFO     21152 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2026-01-29 09:08:01,855 ERROR    21152 LangSmith 追踪初始化失败: object.__init__() takes exactly one argument (the instance to initialize)
+2026-01-29 09:08:01,856 WARNING  21152 LangSmith 追踪未启用（请检查 LANGCHAIN_API_KEY 环境变量）
+2026-01-29 09:08:01,912 INFO     21152 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2026-01-29 09:08:01,967 INFO     21152 语言模型初始化成功: llama3.1:8b
+2026-01-29 09:08:02,320 INFO     21152 pgvector 扩展启用
+2026-01-29 09:08:02,322 INFO     21152 工具向量表已创建或者已存在
+2026-01-29 09:08:02,322 INFO     21152 向量存储服务初始化成功
+2026-01-29 09:08:02,334 INFO     21152 使用Ollama Embeddings: llama3.1:8b
+2026-01-29 09:08:02,334 INFO     21152 tool router 已启用向量检索功能
+2026-01-29 09:08:02,346 INFO     21152 pgvector 扩展启用
+2026-01-29 09:08:02,347 INFO     21152 工具向量表已创建或者已存在
+2026-01-29 09:08:02,347 INFO     21152 向量存储服务初始化成功
+2026-01-29 09:08:02,359 INFO     21152 使用Ollama Embeddings: llama3.1:8b
+2026-01-29 09:08:02,359 INFO     21152 fcPro MCP Agent 已启用工具向量化功能
+2026-01-29 09:08:02,359 INFO     21152 已注册 Agent: fcPro_mcp_agent
+2026-01-29 09:08:02,359 INFO     21152 fcPro MCP Agent 注册成功
+2026-01-29 09:08:02,360 INFO     21152 已设置 1 个 Agent 工具
+2026-01-29 09:08:02,360 INFO     21152 启动 MCP 服务器 MCPAgentServer，监听 http://0.0.0.0:8000/sse
+2026-01-29 09:09:37,568 INFO     18696 graph_mcp2026-01-29 log path: D:\zy\code\python\LangChain\llmservice\llmservice\logs\graph_mcp2026-01-29.log, log levels: {'peewee': 'WARNING', 'pdfminer': 'WARNING', 'root': 'INFO'}
+2026-01-29 09:09:37,568 INFO     18696 初始化 MCP Agent 微服务...
+2026-01-29 09:09:37,568 INFO     18696 
+           ____   ____       _      ____    _   _   __  __    ____   ____  
+          / ___| |  _ \     / \    |  _ \  | | | | |  \/  |  / ___| |  _ \ 
+         | |  _  | |_) |   / _ \   | |_) | | |_| | | |\/| | | |     | |_) |
+         | |_| | |  _ <   / ___ \  |  __/  |  _  | | |  | | | |___  |  __/ 
+          \____| |_| \_\ /_/   \_\ |_|     |_| |_| |_|  |_|  \____| |_|    
+    
+2026-01-29 09:09:37,568 ERROR    18696 LangSmith 追踪初始化失败: object.__init__() takes exactly one argument (the instance to initialize)
+2026-01-29 09:09:37,568 WARNING  18696 LangSmith 追踪未启用（请检查 LANGCHAIN_API_KEY 环境变量）
+2026-01-29 09:09:37,583 INFO     18696 HTTP Request: GET http://localhost:12356/api/tags "HTTP/1.1 200 OK"
+2026-01-29 09:09:37,583 INFO     18696 语言模型初始化成功: llama3.1:8b
+2026-01-29 09:09:37,619 INFO     18696 pgvector 扩展启用
+2026-01-29 09:09:37,620 INFO     18696 工具向量表已创建或者已存在
+2026-01-29 09:09:37,620 INFO     18696 向量存储服务初始化成功
+2026-01-29 09:09:37,633 INFO     18696 使用Ollama Embeddings: llama3.1:8b
+2026-01-29 09:09:37,633 INFO     18696 tool router 已启用向量检索功能
+2026-01-29 09:09:37,646 INFO     18696 pgvector 扩展启用
+2026-01-29 09:09:37,648 INFO     18696 工具向量表已创建或者已存在
+2026-01-29 09:09:37,648 INFO     18696 向量存储服务初始化成功
+2026-01-29 09:09:37,659 INFO     18696 使用Ollama Embeddings: llama3.1:8b
+2026-01-29 09:09:37,659 INFO     18696 fcPro MCP Agent 已启用工具向量化功能
+2026-01-29 09:09:37,659 INFO     18696 已注册 Agent: fcPro_mcp_agent
+2026-01-29 09:09:37,659 INFO     18696 fcPro MCP Agent 注册成功
+2026-01-29 09:09:37,661 INFO     18696 已设置 1 个 Agent 工具
+2026-01-29 09:09:37,661 INFO     18696 启动 MCP 服务器 MCPAgentServer，监听 http://0.0.0.0:8000/sse
+2026-01-29 09:09:42,092 INFO     18696 Processing request of type ListToolsRequest
+2026-01-29 09:10:01,996 INFO     18696 Processing request of type CallToolRequest
+2026-01-29 09:10:23,059 ERROR    18696 fcPro MCP Agent 连接服务器失败: unhandled errors in a TaskGroup (1 sub-exception)
+2026-01-29 09:10:23,059 ERROR    18696 fcPro MCP Agent 同步初始化失败: unhandled errors in a TaskGroup (1 sub-exception)
+2026-01-29 09:10:23,059 WARNING  18696 fcPro MCP Agent 没有可用的工具，请检查fcPro MCP服务是否正常运行
+2026-01-29 09:10:23,077 INFO     18696 fcPro MCP Agent 创建成功，使用 0 个工具
+2026-01-29 09:10:23,402 INFO     18696 HTTP Request: POST http://localhost:12356/api/chat "HTTP/1.1 200 OK"
+2026-01-29 09:10:24,805 INFO     18696 Processing request of type ListToolsRequest

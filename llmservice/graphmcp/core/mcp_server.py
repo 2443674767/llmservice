@@ -1,7 +1,7 @@
 """MCP 服务器基类"""
+import logging
 from typing import Dict, Type
 from mcp.server.fastmcp import FastMCP
-from loguru import logger
 
 from graphmcp.core.agent_base import AgentBase
 
@@ -30,7 +30,7 @@ class MCPServerBase:
         :param agent: Agent 实例
         """
         self.agents[agent.name] = agent
-        logger.info(f"已注册 Agent: {agent.name}")
+        logging.info(f"已注册 Agent: {agent.name}")
 
     def create_agent_tool(self, agent: AgentBase):
         """
@@ -65,9 +65,9 @@ class MCPServerBase:
                         return str(last_message)
                 return str(result)
             except Exception as e:
-                logger.error(f"Agent {agent.name} 执行错误: {e}")
+                logging.error(f"Agent {agent.name} 执行错误: {e}")
                 import traceback
-                logger.debug(f"详细错误:\n{traceback.format_exc()}")
+                logging.debug(f"详细错误:\n{traceback.format_exc()}")
                 return f"错误: {str(e)}"
 
         # 设置工具名称和描述
@@ -83,7 +83,7 @@ class MCPServerBase:
         """设置所有注册的 Agent 工具"""
         for agent in self.agents.values():
             self.create_agent_tool(agent)
-        logger.info(f"已设置 {len(self.agents)} 个 Agent 工具")
+        logging.info(f"已设置 {len(self.agents)} 个 Agent 工具")
 
     def run(self, transport: str = "sse"):
         """
@@ -92,5 +92,5 @@ class MCPServerBase:
         :param transport: 传输协议 (sse, stdio)
         """
         self.setup_agents()
-        logger.info(f"启动 MCP 服务器 {self.name}，监听 http://{self.host}:{self.port}/sse")
+        logging.info(f"启动 MCP 服务器 {self.name}，监听 http://{self.host}:{self.port}/sse")
         self.mcp.run(transport=transport)
